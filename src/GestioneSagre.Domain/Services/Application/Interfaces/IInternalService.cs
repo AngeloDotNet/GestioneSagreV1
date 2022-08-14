@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Models.InputSender;
-
-namespace GestioneSagre.Domain.Services.Application.Interfaces;
+﻿namespace GestioneSagre.Domain.Services.Application.Interfaces;
 
 public interface IInternalService
 {

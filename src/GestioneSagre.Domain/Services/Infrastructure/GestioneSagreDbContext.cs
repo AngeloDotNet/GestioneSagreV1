@@ -1,8 +1,3 @@
-using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Core.Models.Enums;
-using GestioneSagre.Core.Models.ValueObjects;
-using Microsoft.EntityFrameworkCore;
-
 namespace GestioneSagre.Domain.Services.Infrastructure;
 
 public partial class GestioneSagreDbContext : DbContext

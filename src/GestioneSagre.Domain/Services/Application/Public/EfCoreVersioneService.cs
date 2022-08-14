@@ -1,19 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Core.Models.Enums;
-using GestioneSagre.Domain.Services.Application.Interfaces;
-using GestioneSagre.Domain.Services.Infrastructure;
-using GestioneSagre.Models.InputModels;
-using GestioneSagre.Models.ViewModels;
-using ImageMagick;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-
-namespace GestioneSagre.Domain.Services.Application.Public;
+﻿namespace GestioneSagre.Domain.Services.Application.Public;
 
 public class EfCoreVersioneService : IVersioneService
 {

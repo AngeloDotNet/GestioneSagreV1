@@ -1,7 +1,3 @@
-using GestioneSagre.Domain.Services.Application.Interfaces;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-
 namespace GestioneSagre.Domain.Services.Application.Internal;
 
 public class InsecureImagePersister : IImagePersister

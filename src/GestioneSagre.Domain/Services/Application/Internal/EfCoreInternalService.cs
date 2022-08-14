@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Core.Models.Options;
-using GestioneSagre.Domain.Services.Application.Interfaces;
-using GestioneSagre.Models.InputSender;
-using MailKit.Net.Smtp;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using MimeKit;
-using SequentialGuid;
+﻿namespace GestioneSagre.Domain.Services.Application.Internal;
 
-namespace GestioneSagre.Domain.Services.Application.Internal;
 public class EfCoreInternalService : IInternalService
 {
     private readonly IOptionsMonitor<SmtpOptions> smtpOptionsMonitor;
