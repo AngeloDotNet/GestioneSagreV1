@@ -1,0 +1,15 @@
+﻿global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System.Reflection;
+global using System.Text.Json.Serialization;
+global using GestioneSagre.Core.Customizations.Extensions;
+global using GestioneSagre.Core.Models.Options;
+global using GestioneSagre.Domain.Services.Application.Interfaces;
+global using GestioneSagre.Domain.Services.Application.Internal;
+global using GestioneSagre.Domain.Services.Application.Public;
+global using GestioneSagre.Domain.Services.Infrastructure;
+global using Microsoft.AspNetCore.Server.Kestrel.Core;
+global using Microsoft.EntityFrameworkCore;

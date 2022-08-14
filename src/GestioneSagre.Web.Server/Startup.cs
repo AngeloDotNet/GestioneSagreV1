@@ -1,14 +1,3 @@
-using System.Reflection;
-using System.Text.Json.Serialization;
-using GestioneSagre.Core.Customizations.Extensions;
-using GestioneSagre.Core.Models.Options;
-using GestioneSagre.Domain.Services.Application.Interfaces;
-using GestioneSagre.Domain.Services.Application.Internal;
-using GestioneSagre.Domain.Services.Application.Public;
-using GestioneSagre.Domain.Services.Infrastructure;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.EntityFrameworkCore;
-
 namespace GestioneSagre.Web.Server;
 
 public class Startup
