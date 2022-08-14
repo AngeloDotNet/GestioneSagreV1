@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestioneSagre.Core.Models.Options;
+using GestioneSagre.Domain.Services.Application.Interfaces;
 using GestioneSagre.Models.InputSender;
 using MailKit.Net.Smtp;
 using Microsoft.Extensions.Logging;

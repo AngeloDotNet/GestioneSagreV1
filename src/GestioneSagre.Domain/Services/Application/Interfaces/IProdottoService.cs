@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GestioneSagre.Models.InputModels;
 using GestioneSagre.Models.ViewModels;
 
-namespace GestioneSagre.Domain.Services.Application.Public;
+namespace GestioneSagre.Domain.Services.Application.Interfaces;
 public interface IProdottoService
 {
     //COMMAND QUERY

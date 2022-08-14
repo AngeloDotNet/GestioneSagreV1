@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GestioneSagre.Models.InputSender;
 
-namespace GestioneSagre.Domain.Services.Application.Internal;
+namespace GestioneSagre.Domain.Services.Application.Interfaces;
 
 public interface IInternalService
 {

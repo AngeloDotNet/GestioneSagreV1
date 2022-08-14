@@ -1,4 +1,4 @@
-using GestioneSagre.Domain.Services.Application.Internal;
+using GestioneSagre.Domain.Services.Application.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 

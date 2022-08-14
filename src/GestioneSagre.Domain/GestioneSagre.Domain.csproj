@@ -10,4 +10,8 @@
         <ProjectReference Include="..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Services\Application\Public\" />
+    </ItemGroup>
+
 </Project>

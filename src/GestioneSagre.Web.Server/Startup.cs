@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Text.Json.Serialization;
 using GestioneSagre.Core.Customizations.Extensions;
 using GestioneSagre.Core.Models.Options;
+using GestioneSagre.Domain.Services.Application.Interfaces;
 using GestioneSagre.Domain.Services.Application.Internal;
 using GestioneSagre.Domain.Services.Infrastructure;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -60,11 +61,11 @@ public class Startup
 
         services.AddSwaggerServices(Configuration, xmlPath);
 
-        // Services TRANSIENT - GestioneSagre.Application
-        //services.Scan(scan => scan.FromAssemblyOf<EfCoreVersioneService>()
-        //    .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
-        //    .AsImplementedInterfaces()
-        //    .WithTransientLifetime());
+        // Services TRANSIENT - GestioneSagre.Domain.Services.Application.Internal
+        services.Scan(scan => scan.FromAssemblyOf<EfCoreInternalService>()
+            .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
+            .AsImplementedInterfaces()
+            .WithTransientLifetime());
 
         // Services SINGLETON
         services.AddSingleton<IInternalService, EfCoreInternalService>();       

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace GestioneSagre.Domain.Services.Application.Internal;
+namespace GestioneSagre.Domain.Services.Application.Interfaces;
 
 public interface IImagePersister
 {
