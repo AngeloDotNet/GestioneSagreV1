@@ -4,6 +4,7 @@ using GestioneSagre.Core.Customizations.Extensions;
 using GestioneSagre.Core.Models.Options;
 using GestioneSagre.Domain.Services.Application.Interfaces;
 using GestioneSagre.Domain.Services.Application.Internal;
+using GestioneSagre.Domain.Services.Application.Public;
 using GestioneSagre.Domain.Services.Infrastructure;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
@@ -63,6 +64,12 @@ public class Startup
 
         // Services TRANSIENT - GestioneSagre.Domain.Services.Application.Internal
         services.Scan(scan => scan.FromAssemblyOf<EfCoreInternalService>()
+            .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
+            .AsImplementedInterfaces()
+            .WithTransientLifetime());
+
+        // Services TRANSIENT - GestioneSagre.Domain.Services.Application.Public
+        services.Scan(scan => scan.FromAssemblyOf<EfCoreVersioneService>()
             .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
             .AsImplementedInterfaces()
             .WithTransientLifetime());

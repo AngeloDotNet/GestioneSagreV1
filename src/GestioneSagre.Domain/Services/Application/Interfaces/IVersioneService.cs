@@ -12,10 +12,10 @@ public interface IVersioneService
 {
     //COMMAND QUERY
     Task<List<VersioneViewModel>> GetVersioniAsync();
-    Task<VersioneViewModel> GetVersioneAsync(string CodiceVersione);
-    Task<bool> IsVersioneAvailableAsync(string title, int excludeId);
+    Task<VersioneViewModel> GetVersioneAsync(string codiceVersione);
+    Task<bool> IsVersioneAvailableAsync(string codiceVersione, int id);
 
     //COMMAND STACK
     Task<VersioneViewModel> CreateVersioneAsync(VersioneInputModel inputModel);
-    Task DeleteVersioneAsync(string CodiceVersione);
+    Task DeleteVersioneAsync(int id);
 }
