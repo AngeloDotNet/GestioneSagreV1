@@ -1,5 +1,3 @@
-using GestioneSagre.Core.Models.Enums;
-
 namespace GestioneSagre.Core.Models.ValueObjects;
 
 public record Money

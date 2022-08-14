@@ -1,6 +1,4 @@
-﻿using MailKit.Security;
-
-namespace GestioneSagre.Core.Models.Options;
+﻿namespace GestioneSagre.Core.Models.Options;
 
 public class SmtpOptions
 {

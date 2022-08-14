@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace GestioneSagre.Core.Models.Enums;
 
-namespace GestioneSagre.Core.Models.Enums;
 public enum PagamentoTipo
 {
     [Display(Name = "Contanti")]

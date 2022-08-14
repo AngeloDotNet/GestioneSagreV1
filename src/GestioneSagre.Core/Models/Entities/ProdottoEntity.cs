@@ -1,5 +1,3 @@
-using GestioneSagre.Core.Models.ValueObjects;
-
 namespace GestioneSagre.Core.Models.Entities;
 
 public class ProdottoEntity
