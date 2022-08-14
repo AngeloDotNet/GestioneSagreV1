@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Core.Models.Entities;
+﻿namespace GestioneSagre.Models.InputModels;
 
-namespace GestioneSagre.Models.InputModels;
 public class CategoriaInputModel
 {
     public int Id { get; set; }

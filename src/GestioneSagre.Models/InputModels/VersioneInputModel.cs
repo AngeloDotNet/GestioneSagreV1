@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Core.Models.Enums;
+﻿namespace GestioneSagre.Models.InputModels;
 
-namespace GestioneSagre.Models.InputModels;
 public class VersioneInputModel
 {
     public int Id { get; set; }

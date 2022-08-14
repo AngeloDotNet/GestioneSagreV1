@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Core.Models.ValueObjects;
-using GestioneSagre.Models.InputModels;
+﻿namespace GestioneSagre.Models.ViewModels;
 
-namespace GestioneSagre.Models.ViewModels;
 public class ProdottoViewModel
 {
     public int Id { get; set; }
