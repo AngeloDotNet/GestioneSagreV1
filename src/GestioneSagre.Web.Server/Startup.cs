@@ -64,8 +64,8 @@ public class Startup
             .WithTransientLifetime());
 
         // Services SINGLETON
-        services.AddSingleton<IInternalService, EfCoreInternalService>();       
-        services.AddSingleton<IImagePersister, MagickNetImagePersister>();      
+        services.AddSingleton<IInternalService, EfCoreInternalService>();
+        services.AddSingleton<IImagePersister, MagickNetImagePersister>();
         //services.AddSingleton<ITransactionLogger, LocalTransactionLogger>();    
 
         // Options
@@ -92,7 +92,7 @@ public class Startup
 
         app.UseHttpsRedirection();
         app.UseBlazorFrameworkFiles();
-        
+
         app.UseStaticFiles();
         app.UseRouting();
 
