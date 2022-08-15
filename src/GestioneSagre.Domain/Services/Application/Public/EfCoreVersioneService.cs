@@ -19,8 +19,12 @@ public class EfCoreVersioneService : IVersioneService
         IQueryable<VersioneEntity> queryLinq = baseQuery
             .AsNoTracking();
 
+        //List<VersioneViewModel> versioni = await queryLinq
+        //    .Select(versione => VersioneViewModel.FromEntity(versione))
+        //    .ToListAsync();
+
         List<VersioneViewModel> versioni = await queryLinq
-            .Select(versione => VersioneViewModel.FromEntity(versione))
+            .Select(versione => versione.ToVersioneViewModel())
             .ToListAsync();
 
         return versioni;
@@ -28,10 +32,15 @@ public class EfCoreVersioneService : IVersioneService
 
     public async Task<VersioneViewModel> GetVersioneAsync(string codiceVersione)
     {
+        //IQueryable<VersioneViewModel> queryLinq = dbContext.Versioni
+        //    .AsNoTracking()
+        //    .Where(versione => versione.CodiceVersione == codiceVersione)
+        //    .Select(versione => VersioneViewModel.FromEntity(versione));
+
         IQueryable<VersioneViewModel> queryLinq = dbContext.Versioni
             .AsNoTracking()
             .Where(versione => versione.CodiceVersione == codiceVersione)
-            .Select(versione => VersioneViewModel.FromEntity(versione));
+            .Select(versione => versione.ToVersioneViewModel());
 
         VersioneViewModel viewModel = await queryLinq.FirstOrDefaultAsync();
 
@@ -45,7 +54,7 @@ public class EfCoreVersioneService : IVersioneService
     }
 
     //COMMAND STACK
-    public async Task<VersioneViewModel> CreateVersioneAsync(VersioneInputModel inputModel)
+    public async Task<VersioneViewModel> CreateVersioneAsync(VersioneCreateInputModel inputModel)
     {
         VersioneEntity versione = new()
         {
@@ -57,11 +66,12 @@ public class EfCoreVersioneService : IVersioneService
         dbContext.Add(versione);
         await dbContext.SaveChangesAsync();
 
-        return VersioneViewModel.FromEntity(versione);
+        //return VersioneViewModel.FromEntity(versione);
+        return versione.ToVersioneViewModel();
     }
-    public async Task DeleteVersioneAsync(int id)
+    public async Task DeleteVersioneAsync(VersioneDeleteInputModel inputModel)
     {
-        VersioneEntity versione = await dbContext.Versioni.FindAsync(id);
+        VersioneEntity versione = await dbContext.Versioni.FindAsync(inputModel.Id);
 
         versione.VersioneStato = VersioneStato.Deprecata;
         await dbContext.SaveChangesAsync();

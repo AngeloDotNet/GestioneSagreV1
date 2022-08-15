@@ -5,10 +5,11 @@ public interface IFestaService
     //COMMAND QUERY
     Task<List<FestaViewModel>> GetFesteAsync();
     Task<FestaViewModel> GetFestaAsync(string guidFesta);
+    Task<FestaEditInputModel> GetFestaForEditingAsync(string guidFesta);
     Task<int> GetCountFesteAsync();
 
     //COMMAND STACK
-    Task<FestaViewModel> CreateFestaAsync(FestaInputModel inputModel);
-    Task<FestaViewModel> EditFestaAsync(FestaInputModel inputModel);
-    Task DeleteFestaAsync(string guidFesta, int Id);
+    Task<FestaViewModel> CreateFestaAsync(FestaCreateInputModel inputModel);
+    Task<FestaViewModel> EditFestaAsync(FestaEditInputModel inputModel);
+    Task DeleteFestaAsync(FestaDeleteInputModel inputModel);
 }

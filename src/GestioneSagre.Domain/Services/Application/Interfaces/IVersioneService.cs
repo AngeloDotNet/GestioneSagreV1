@@ -8,6 +8,6 @@ public interface IVersioneService
     Task<bool> IsVersioneAvailableAsync(string codiceVersione, int id);
 
     //COMMAND STACK
-    Task<VersioneViewModel> CreateVersioneAsync(VersioneInputModel inputModel);
-    Task DeleteVersioneAsync(int id);
+    Task<VersioneViewModel> CreateVersioneAsync(VersioneCreateInputModel inputModel);
+    Task DeleteVersioneAsync(VersioneDeleteInputModel inputModel);
 }
