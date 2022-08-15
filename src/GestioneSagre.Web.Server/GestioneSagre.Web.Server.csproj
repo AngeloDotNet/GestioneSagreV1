@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,14 +17,15 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\CommandStack\GestioneSagre.Versioni.CommandStack\GestioneSagre.Versioni.CommandStack.csproj" />
         <ProjectReference Include="..\GestioneSagre.Core\GestioneSagre.Core.csproj" />
         <ProjectReference Include="..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
         <ProjectReference Include="..\GestioneSagre.Web.Migrations\GestioneSagre.Web.Migrations.csproj" />
+        <ProjectReference Include="..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />
     </ItemGroup>
 
     <ItemGroup>
         <Folder Include="Data\" />
-        <Folder Include="Controllers\" />
     </ItemGroup>
 
 
