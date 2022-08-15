@@ -1,4 +1,5 @@
 ﻿namespace GestioneSagre.Models.InputModels.Categoria;
+
 public class CategoriaEditInputModel
 {
     public int Id { get; set; }

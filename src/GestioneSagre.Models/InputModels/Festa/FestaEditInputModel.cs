@@ -1,4 +1,5 @@
 ﻿namespace GestioneSagre.Models.InputModels.Festa;
+
 public class FestaEditInputModel
 {
     public int Id { get; set; }

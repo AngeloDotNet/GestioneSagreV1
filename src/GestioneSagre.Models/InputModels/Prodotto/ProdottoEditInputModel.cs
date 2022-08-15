@@ -1,4 +1,5 @@
 ﻿namespace GestioneSagre.Models.InputModels.Prodotto;
+
 public class ProdottoEditInputModel
 {
     public int Id { get; set; }
