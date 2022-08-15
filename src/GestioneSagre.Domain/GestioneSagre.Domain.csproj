@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Extensions\GestioneSagre.InputExtensions\GestioneSagre.InputExtensions.csproj" />
+        <ProjectReference Include="..\Extensions\GestioneSagre.ViewExtensions\GestioneSagre.ViewExtensions.csproj" />
+        <ProjectReference Include="..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
+    </ItemGroup>
+
+</Project>
