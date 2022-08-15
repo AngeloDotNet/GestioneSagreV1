@@ -7,14 +7,14 @@ public class CategoriaViewModel
     public string CategoriaVideo { get; set; }
     public string CategoriaStampa { get; set; }
 
-    public static CategoriaViewModel FromEntity(CategoriaEntity entity)
-    {
-        return new CategoriaViewModel
-        {
-            Id = entity.Id,
-            GuidFesta = entity.GuidFesta,
-            CategoriaVideo = entity.CategoriaVideo,
-            CategoriaStampa = entity.CategoriaStampa,
-        };
-    }
+    //public static CategoriaViewModel FromEntity(CategoriaEntity entity)
+    //{
+    //    return new CategoriaViewModel
+    //    {
+    //        Id = entity.Id,
+    //        GuidFesta = entity.GuidFesta,
+    //        CategoriaVideo = entity.CategoriaVideo,
+    //        CategoriaStampa = entity.CategoriaStampa,
+    //    };
+    //}
 }

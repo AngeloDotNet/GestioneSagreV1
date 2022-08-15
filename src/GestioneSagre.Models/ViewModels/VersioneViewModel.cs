@@ -7,14 +7,14 @@ public class VersioneViewModel
     public string TestoVersione { get; set; }
     public VersioneStato VersioneStato { get; set; }
 
-    public static VersioneViewModel FromEntity(VersioneEntity entity)
-    {
-        return new VersioneViewModel
-        {
-            Id = entity.Id,
-            CodiceVersione = entity.CodiceVersione,
-            TestoVersione = entity.TestoVersione,
-            VersioneStato = entity.VersioneStato,
-        };
-    }
+    //public static VersioneViewModel FromEntity(VersioneEntity entity)
+    //{
+    //    return new VersioneViewModel
+    //    {
+    //        Id = entity.Id,
+    //        CodiceVersione = entity.CodiceVersione,
+    //        TestoVersione = entity.TestoVersione,
+    //        VersioneStato = entity.VersioneStato,
+    //    };
+    //}
 }

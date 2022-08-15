@@ -14,21 +14,21 @@ public class ProdottoViewModel
     public bool AvvisoScorta { get; set; }
     public bool Prenotazione { get; set; }
 
-    public static ProdottoViewModel FromEntity(ProdottoEntity entity)
-    {
-        return new ProdottoViewModel
-        {
-            Id = entity.Id,
-            GuidFesta = entity.GuidFesta,
-            CategoriaId = entity.CategoriaId,
-            Prodotto = entity.Prodotto,
-            ProdottoAttivo = entity.ProdottoAttivo,
-            Prezzo = entity.Prezzo,
-            Quantita = entity.Quantita,
-            QuantitaAttiva = entity.QuantitaAttiva,
-            QuantitaScorta = entity.QuantitaScorta,
-            AvvisoScorta = entity.AvvisoScorta,
-            Prenotazione = entity.Prenotazione,
-        };
-    }
+    //public static ProdottoViewModel FromEntity(ProdottoEntity entity)
+    //{
+    //    return new ProdottoViewModel
+    //    {
+    //        Id = entity.Id,
+    //        GuidFesta = entity.GuidFesta,
+    //        CategoriaId = entity.CategoriaId,
+    //        Prodotto = entity.Prodotto,
+    //        ProdottoAttivo = entity.ProdottoAttivo,
+    //        Prezzo = entity.Prezzo,
+    //        Quantita = entity.Quantita,
+    //        QuantitaAttiva = entity.QuantitaAttiva,
+    //        QuantitaScorta = entity.QuantitaScorta,
+    //        AvvisoScorta = entity.AvvisoScorta,
+    //        Prenotazione = entity.Prenotazione,
+    //    };
+    //}
 }

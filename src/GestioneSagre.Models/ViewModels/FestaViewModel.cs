@@ -17,24 +17,24 @@ public class FestaViewModel
     public bool StampaRicevuta { get; set; }
     public FestaStato StatusFesta { get; set; }
 
-    public static FestaViewModel FromEntity(FestaEntity entity)
-    {
-        return new FestaViewModel
-        {
-            Id = entity.Id,
-            GuidFesta = entity.GuidFesta,
-            DataInizio = entity.DataInizio,
-            DataFine = entity.DataFine,
-            Titolo = entity.Titolo,
-            Edizione = entity.Edizione,
-            Luogo = entity.Luogo,
-            Logo = entity.Logo,
-            GestioneCoperti = entity.GestioneCoperti,
-            GestioneMenu = entity.GestioneMenu,
-            StampaCarta = entity.StampaCarta,
-            StampaLogo = entity.StampaLogo,
-            StampaRicevuta = entity.StampaRicevuta,
-            StatusFesta = entity.StatusFesta,
-        };
-    }
+    //public static FestaViewModel FromEntity(FestaEntity entity)
+    //{
+    //    return new FestaViewModel
+    //    {
+    //        Id = entity.Id,
+    //        GuidFesta = entity.GuidFesta,
+    //        DataInizio = entity.DataInizio,
+    //        DataFine = entity.DataFine,
+    //        Titolo = entity.Titolo,
+    //        Edizione = entity.Edizione,
+    //        Luogo = entity.Luogo,
+    //        Logo = entity.Logo,
+    //        GestioneCoperti = entity.GestioneCoperti,
+    //        GestioneMenu = entity.GestioneMenu,
+    //        StampaCarta = entity.StampaCarta,
+    //        StampaLogo = entity.StampaLogo,
+    //        StampaRicevuta = entity.StampaRicevuta,
+    //        StatusFesta = entity.StatusFesta,
+    //    };
+    //}
 }
