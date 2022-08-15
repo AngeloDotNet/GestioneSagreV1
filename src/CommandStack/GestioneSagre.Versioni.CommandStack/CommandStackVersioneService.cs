@@ -1,6 +1,6 @@
 ﻿namespace GestioneSagre.Versioni.CommandStack;
 
-public class CommandStackVersioneService : IVersioneService
+public class CommandStackVersioneService : IVersioneCommandStackService
 {
     private readonly ILogger<CommandStackVersioneService> logger;
     private readonly GestioneSagreDbContext dbContext;
