@@ -1,11 +1,15 @@
 ﻿global using System;
+global using System.Net.Mime;
 global using System.Reflection;
 global using System.Text.Json.Serialization;
 global using GestioneSagre.Core.Customizations.ServiceCollection;
 global using GestioneSagre.Core.Models.Options;
 global using GestioneSagre.Domain.Services.Application.Interfaces;
 global using GestioneSagre.Domain.Services.Application.Internal;
-global using GestioneSagre.Domain.Services.Application.Public;
 global using GestioneSagre.Domain.Services.Infrastructure;
+global using GestioneSagre.Versioni.CommandStack;
+global using GestioneSagre.Versioni.QueryStack;
+global using GestioneSagre.Web.Server.Controllers.Common;
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Server.Kestrel.Core;
 global using Microsoft.EntityFrameworkCore;

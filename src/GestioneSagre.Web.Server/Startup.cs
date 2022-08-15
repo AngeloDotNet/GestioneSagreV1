@@ -51,22 +51,17 @@ public class Startup
 
         services.AddSwaggerServices(Configuration, xmlPath);
 
-        // Services TRANSIENT - GestioneSagre.Domain.Services.Application.Internal
-        services.Scan(scan => scan.FromAssemblyOf<EfCoreInternalService>()
-            .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
-            .AsImplementedInterfaces()
-            .WithTransientLifetime());
+        // Services TRANSIENT - GestioneSagre.Versioni.CommandStack
+        //services.AddTransient<IVersioneCommandStackService, CommandStackVersioneService>();
+        services.AddTransient<CommandStackVersioneService>();
 
-        // Services TRANSIENT - GestioneSagre.Domain.Services.Application.Public
-        services.Scan(scan => scan.FromAssemblyOf<EfCoreVersioneService>()
-            .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
-            .AsImplementedInterfaces()
-            .WithTransientLifetime());
+        // Services TRANSIENT - GestioneSagre.Versioni.QueryStack
+        //services.AddTransient<IVersioneQueryStackService, QueryStackVersioneService>();
+        services.AddTransient<QueryStackVersioneService>();
 
         // Services SINGLETON
         services.AddSingleton<IInternalService, EfCoreInternalService>();
         services.AddSingleton<IImagePersister, MagickNetImagePersister>();
-        //services.AddSingleton<ITransactionLogger, LocalTransactionLogger>();    
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
