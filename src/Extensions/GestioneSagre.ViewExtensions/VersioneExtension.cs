@@ -1,7 +1,4 @@
-﻿using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Models.ViewModels;
-
-namespace GestioneSagre.ViewExtensions;
+﻿namespace GestioneSagre.ViewExtensions;
 
 public static class VersioneExtension
 {
