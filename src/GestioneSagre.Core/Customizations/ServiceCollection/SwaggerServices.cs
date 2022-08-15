@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Core.Customizations.Extensions;
+﻿namespace GestioneSagre.Core.Customizations.ServiceCollection;
 
 public static class SwaggerServices
 {
