@@ -5,6 +5,7 @@ global using GestioneSagre.Core.Models.Entities;
 global using GestioneSagre.Core.Models.Enums;
 global using GestioneSagre.Core.Models.Options;
 global using GestioneSagre.Core.Models.ValueObjects;
+global using GestioneSagre.Domain.Services.Application.Interfaces;
 global using GestioneSagre.Models.InputModels.Categoria;
 global using GestioneSagre.Models.InputModels.Festa;
 global using GestioneSagre.Models.InputModels.Prodotto;
