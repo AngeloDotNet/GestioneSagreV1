@@ -1,6 +1,6 @@
 ﻿namespace GestioneSagre.Versioni.QueryStack;
 
-public interface IVersioneService
+public interface IVersioneQueryStackService
 {
     Task<List<VersioneViewModel>> GetVersioniAsync();
     Task<VersioneViewModel> GetVersioneAsync(string codiceVersione);
