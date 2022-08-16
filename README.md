@@ -2,9 +2,7 @@
 
 Free software that allows the web management of festivals and village festivals written in C# and Blazor Wasm
 
-<!--![image](https://user-images.githubusercontent.com/49655304/181378949-adc988cb-8f49-4e97-85e7-24bf229bd2ce.png)
-![image](https://user-images.githubusercontent.com/49655304/177003851-6ca5cae8-240a-4a19-82bd-20f333a6f407.png)-->
-![image](https://user-images.githubusercontent.com/49655304/181936810-9ef97ec9-9abc-44fe-b700-ec27dddcab4a.png)
+<!--![image](https://user-images.githubusercontent.com/49655304/181936810-9ef97ec9-9abc-44fe-b700-ec27dddcab4a.png)-->
 
 
 ## Features
