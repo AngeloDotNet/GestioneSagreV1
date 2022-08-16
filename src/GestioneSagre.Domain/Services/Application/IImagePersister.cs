@@ -1,4 +1,4 @@
-namespace GestioneSagre.Domain.Services.Application.Interfaces;
+namespace GestioneSagre.Domain.Services.Application;
 
 public interface IImagePersister
 {
