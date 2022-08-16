@@ -1,24 +1,22 @@
-﻿using GestioneSagre.Models.InputModels.Versione;
-using GestioneSagre.Models.ViewModels;
-using GestioneSagre.Versioni.CommandStack;
-using GestioneSagre.Versioni.QueryStack;
-using Microsoft.AspNetCore.Authorization;
-
-namespace GestioneSagre.Web.Server.Controllers;
+﻿namespace GestioneSagre.Web.Server.Controllers;
 
 public class VersioneController : BaseController
 {
     private readonly IVersioneCommandStackService commandService;
     private readonly IVersioneQueryStackService queryService;
+    private readonly IValidator<VersioneCreateInputModel> versioneCreateValidator;
 
-    public VersioneController(CommandStackVersioneService commandVersioneService, QueryStackVersioneService queryVersioneService)
+    public VersioneController(CommandStackVersioneService commandVersioneService,
+                              VersioneQueryStackService queryVersioneService,
+                              IValidator<VersioneCreateInputModel> versioneCreateValidator)
     {
         this.commandService = commandVersioneService;
         this.queryService = queryVersioneService;
+        this.versioneCreateValidator = versioneCreateValidator;
     }
 
     /// <summary>
-    /// Mostra un elenco di versioni software
+    /// Elenco di versioni software
     /// </summary>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
@@ -41,7 +39,7 @@ public class VersioneController : BaseController
     }
 
     /// <summary>
-    /// Mostra i dettagli di una specifica versione software
+    /// Dettagli di una specifica versione software
     /// </summary>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
@@ -73,7 +71,7 @@ public class VersioneController : BaseController
     }
 
     /// <summary>
-    /// Crea una nuova versione software
+    /// Nuova versione software
     /// </summary>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
@@ -85,6 +83,19 @@ public class VersioneController : BaseController
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<IActionResult> CreateVersioneAsync(VersioneCreateInputModel inputModel)
     {
+        var validation = await versioneCreateValidator.ValidateAsync(inputModel);
+        List<string> listaErrori = new();
+
+        if (!validation.IsValid)
+        {
+            foreach (var item in validation.Errors)
+            {
+                listaErrori.Add(item.ErrorMessage);
+            }
+
+            return StatusCode(StatusCodes.Status400BadRequest, listaErrori);
+        }
+
         try
         {
             bool bRes = await queryService.IsVersioneAvailableAsync(inputModel.TestoVersione, 0);
