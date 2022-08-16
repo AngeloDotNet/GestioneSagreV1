@@ -1,6 +1,6 @@
-﻿namespace GestioneSagre.Domain.Services.Application.Interfaces;
+﻿namespace GestioneSagre.Internal.QueryStack;
 
-public interface IInternalService
+public interface IInternalQueryStackService
 {
     Task<string> GenerateGuid();
     Task<string> GenerateImageDefault();

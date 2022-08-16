@@ -1,11 +1,11 @@
 ﻿namespace GestioneSagre.Versioni.QueryStack;
 
-public class QueryStackVersioneService : IVersioneQueryStackService
+public class VersioneQueryStackService : IVersioneQueryStackService
 {
-    private readonly ILogger<QueryStackVersioneService> logger;
+    private readonly ILogger<VersioneQueryStackService> logger;
     private readonly GestioneSagreDbContext dbContext;
 
-    public QueryStackVersioneService(ILogger<QueryStackVersioneService> logger, GestioneSagreDbContext dbContext)
+    public VersioneQueryStackService(ILogger<VersioneQueryStackService> logger, GestioneSagreDbContext dbContext)
     {
         this.logger = logger;
         this.dbContext = dbContext;

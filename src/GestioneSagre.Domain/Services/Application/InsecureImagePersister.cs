@@ -1,4 +1,4 @@
-namespace GestioneSagre.Domain.Services.Application.Internal;
+namespace GestioneSagre.Domain.Services.Application;
 
 public class InsecureImagePersister : IImagePersister
 {

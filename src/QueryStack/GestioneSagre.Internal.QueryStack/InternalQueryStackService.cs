@@ -1,11 +1,11 @@
-﻿namespace GestioneSagre.Domain.Services.Application.Internal;
+﻿namespace GestioneSagre.Internal.QueryStack;
 
-public class EfCoreInternalService : IInternalService
+public class InternalQueryStackService : IInternalQueryStackService
 {
+    private readonly ILogger<InternalQueryStackService> logger;
     private readonly IOptionsMonitor<SmtpOptions> smtpOptionsMonitor;
-    private readonly ILogger<EfCoreInternalService> logger;
 
-    public EfCoreInternalService(IOptionsMonitor<SmtpOptions> smtpOptionsMonitor, ILogger<EfCoreInternalService> logger)
+    public InternalQueryStackService(ILogger<InternalQueryStackService> logger, IOptionsMonitor<SmtpOptions> smtpOptionsMonitor)
     {
         this.logger = logger;
         this.smtpOptionsMonitor = smtpOptionsMonitor;

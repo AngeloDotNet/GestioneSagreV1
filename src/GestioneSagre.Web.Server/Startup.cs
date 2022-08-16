@@ -11,12 +11,22 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+#pragma warning disable CS0618 // Il tipo o il membro è obsoleto
         services.AddControllersWithViews()
             .AddJsonOptions(options =>
             {
                 // Info su: https://github.com/marcominerva/MyWebApiToolbox
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
+            })
+            .AddFluentValidation(options =>
+            {
+                options.AutomaticValidationEnabled = false;
+                // GestioneSagre.Versioni.Validators
+                options.RegisterValidatorsFromAssemblyContaining<VersioneCreateValidator>();
+                // GestioneSagre.Internal.Validators
+                options.RegisterValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
             });
+#pragma warning restore CS0618 // Il tipo o il membro è obsoleto
 
         services.AddRazorPages();
         services.AddCors(options =>
@@ -51,16 +61,15 @@ public class Startup
 
         services.AddSwaggerServices(Configuration, xmlPath);
 
-        // Services TRANSIENT - GestioneSagre.Versioni.CommandStack
+        // Services TRANSIENT - GestioneSagre.XXX.CommandStack
         //services.AddTransient<IVersioneCommandStackService, CommandStackVersioneService>();
         services.AddTransient<CommandStackVersioneService>();
 
-        // Services TRANSIENT - GestioneSagre.Versioni.QueryStack
-        //services.AddTransient<IVersioneQueryStackService, QueryStackVersioneService>();
-        services.AddTransient<QueryStackVersioneService>();
+        // Services TRANSIENT - GestioneSagre.XXX.QueryStack
+        services.AddTransient<VersioneQueryStackService>();
 
         // Services SINGLETON
-        services.AddSingleton<IInternalService, EfCoreInternalService>();
+        services.AddSingleton<IInternalQueryStackService, InternalQueryStackService>();
         services.AddSingleton<IImagePersister, MagickNetImagePersister>();
 
         // Options

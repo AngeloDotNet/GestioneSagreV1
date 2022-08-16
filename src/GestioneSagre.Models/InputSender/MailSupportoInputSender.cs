@@ -2,15 +2,9 @@
 
 public partial class MailSupportoInputSender
 {
-    [Required]
     public string MittenteNominativo { get; set; }
-
-    [Required]
     public string MittenteEmail { get; set; }
-
-    [Required]
     public string Messaggio { get; set; }
-
     public InputMailOptionSender OptionSender { get; set; }
 }
 

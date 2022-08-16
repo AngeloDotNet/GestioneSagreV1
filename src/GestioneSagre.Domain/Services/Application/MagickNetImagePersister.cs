@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Domain.Services.Application.Internal;
+﻿namespace GestioneSagre.Domain.Services.Application;
 
 public class MagickNetImagePersister : IImagePersister
 {
@@ -20,19 +20,19 @@ public class MagickNetImagePersister : IImagePersister
 
         try
         {
-            string path = $"/{imagePath}/{imageName}.{imageExtension}";
-            string physicalPath = Path.Combine(env.ContentRootPath, imagePath, $"{imageName}.{imageExtension}");
+            var path = $"/{imagePath}/{imageName}.{imageExtension}";
+            var physicalPath = Path.Combine(env.ContentRootPath, imagePath, $"{imageName}.{imageExtension}");
 
             if (!Directory.Exists(Path.GetDirectoryName(physicalPath)))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(physicalPath));
             }
 
-            using Stream inputStream = formFile.OpenReadStream();
+            using var inputStream = formFile.OpenReadStream();
             using MagickImage image = new(inputStream);
 
-            int width = 300;
-            int height = 300;
+            var width = 300;
+            var height = 300;
 
             MagickGeometry resizeGeometry = new(width, height)
             {
