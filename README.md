@@ -19,7 +19,7 @@ Free software that allows the web management of festivals and village festivals 
 
 **Server:** Blazor, .NET 6
 
-**Database:** SQL Server
+**Database:** SQLite
 
 **Graphics:** Bootstrap 5.2.0, Font Awesome Free 6.1.1
 
