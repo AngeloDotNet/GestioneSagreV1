@@ -6,7 +6,7 @@ public class VersioneController : BaseController
     private readonly IVersioneQueryStackService queryService;
     private readonly IValidator<VersioneCreateInputModel> versioneCreateValidator;
 
-    public VersioneController(CommandStackVersioneService commandVersioneService,
+    public VersioneController(VersioneCommandStackService commandVersioneService,
                               VersioneQueryStackService queryVersioneService,
                               IValidator<VersioneCreateInputModel> versioneCreateValidator)
     {
@@ -28,7 +28,7 @@ public class VersioneController : BaseController
     {
         try
         {
-            List<VersioneViewModel> versione = await queryService.GetVersioniAsync();
+            var versione = await queryService.GetVersioniAsync();
 
             return Ok(versione);
         }
@@ -49,13 +49,11 @@ public class VersioneController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> GetVersioneAsync(Guid codiceVersione)
+    public async Task<IActionResult> GetVersioneAsync(string codiceVersione)
     {
         try
         {
-            var codice = codiceVersione.ToString();
-
-            VersioneViewModel versione = await queryService.GetVersioneAsync(codice);
+            var versione = await queryService.GetVersioneAsync(codiceVersione);
 
             if (versione == null)
             {
@@ -98,7 +96,7 @@ public class VersioneController : BaseController
 
         try
         {
-            bool bRes = await queryService.IsVersioneAvailableAsync(inputModel.TestoVersione, 0);
+            var bRes = await queryService.IsVersioneAvailableAsync(inputModel.TestoVersione, 0);
 
             if (!bRes)
             {
@@ -106,7 +104,7 @@ public class VersioneController : BaseController
             }
             else
             {
-                VersioneViewModel versione = await commandService.CreateVersioneAsync(inputModel);
+                var versione = await commandService.CreateVersioneAsync(inputModel);
                 return Ok(versione);
             }
         }

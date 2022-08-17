@@ -13,22 +13,4 @@ public class ProdottoCreateInputModel
     public int QuantitaScorta { get; set; }
     public bool AvvisoScorta { get; set; }
     public bool Prenotazione { get; set; }
-
-    //public static ProdottoInputModel FromEntity(ProdottoEntity entity)
-    //{
-    //    return new ProdottoInputModel
-    //    {
-    //        Id = entity.Id,
-    //        GuidFesta = entity.GuidFesta,
-    //        CategoriaId = entity.CategoriaId,
-    //        Prodotto = entity.Prodotto,
-    //        ProdottoAttivo = entity.ProdottoAttivo,
-    //        Prezzo = entity.Prezzo,
-    //        Quantita = entity.Quantita,
-    //        QuantitaAttiva = entity.QuantitaAttiva,
-    //        QuantitaScorta = entity.QuantitaScorta,
-    //        AvvisoScorta = entity.AvvisoScorta,
-    //        Prenotazione = entity.Prenotazione,
-    //    };
-    //}
 }

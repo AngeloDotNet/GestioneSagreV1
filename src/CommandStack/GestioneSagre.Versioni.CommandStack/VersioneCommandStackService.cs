@@ -1,11 +1,11 @@
 ﻿namespace GestioneSagre.Versioni.CommandStack;
 
-public class CommandStackVersioneService : IVersioneCommandStackService
+public class VersioneCommandStackService : IVersioneCommandStackService
 {
-    private readonly ILogger<CommandStackVersioneService> logger;
+    private readonly ILogger<VersioneCommandStackService> logger;
     private readonly GestioneSagreDbContext dbContext;
 
-    public CommandStackVersioneService(ILogger<CommandStackVersioneService> logger, GestioneSagreDbContext dbContext)
+    public VersioneCommandStackService(ILogger<VersioneCommandStackService> logger, GestioneSagreDbContext dbContext)
     {
         this.logger = logger;
         this.dbContext = dbContext;
@@ -23,13 +23,12 @@ public class CommandStackVersioneService : IVersioneCommandStackService
         dbContext.Add(versione);
         await dbContext.SaveChangesAsync();
 
-        //return VersioneViewModel.FromEntity(versione);
         return versione.ToVersioneViewModel();
     }
 
     public async Task DeleteVersioneAsync(VersioneDeleteInputModel inputModel)
     {
-        VersioneEntity versione = await dbContext.Versioni.FindAsync(inputModel.Id);
+        var versione = await dbContext.Versioni.FindAsync(inputModel.Id);
 
         versione.VersioneStato = VersioneStato.Deprecata;
         await dbContext.SaveChangesAsync();

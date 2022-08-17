@@ -46,9 +46,11 @@ public class InternalQueryStackService : IInternalQueryStackService
             message.To.Add(MailboxAddress.Parse($"{options.DestinatarioNominativo} <{options.DestinatarioEmail}>"));
             message.Subject = options.Oggetto;
 
-            var builder = new BodyBuilder();
+            var builder = new BodyBuilder
+            {
+                HtmlBody = model.Messaggio
+            };
 
-            builder.HtmlBody = model.Messaggio;
             message.Body = builder.ToMessageBody();
 
             await client.SendAsync(message);

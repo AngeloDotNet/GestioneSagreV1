@@ -8,7 +8,7 @@ public class MailSupportoSenderValidator : AbstractValidator<MailSupportoInputSe
             .NotEmpty().WithMessage("Il nominativo del mittente è obbligatorio");
 
         RuleFor(x => x.MittenteEmail)
-            .NotEmpty().WithMessage("L'indirizzo email del mittente è obbligatorio");
+            .NotEmpty().EmailAddress().WithMessage("L'indirizzo email del mittente è obbligatorio");
 
         RuleFor(x => x.Messaggio)
             .NotEmpty().WithMessage("Il messaggio è obbligatorio");

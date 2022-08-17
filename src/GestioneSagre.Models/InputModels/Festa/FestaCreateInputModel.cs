@@ -16,25 +16,4 @@ public class FestaCreateInputModel
     public bool StampaLogo { get; set; }
     public bool StampaRicevuta { get; set; }
     public FestaStato StatusFesta { get; set; }
-
-    //public static FestaCreateInputModel FromEntity(FestaEntity entity)
-    //{
-    //    return new FestaCreateInputModel
-    //    {
-    //        Id = entity.Id,
-    //        GuidFesta = entity.GuidFesta,
-    //        DataInizio = entity.DataInizio,
-    //        DataFine = entity.DataFine,
-    //        Titolo = entity.Titolo,
-    //        Edizione = entity.Edizione,
-    //        Luogo = entity.Luogo,
-    //        Logo = entity.Logo,
-    //        GestioneCoperti = entity.GestioneCoperti,
-    //        GestioneMenu = entity.GestioneMenu,
-    //        StampaCarta = entity.StampaCarta,
-    //        StampaLogo = entity.StampaLogo,
-    //        StampaRicevuta = entity.StampaRicevuta,
-    //        StatusFesta = entity.StatusFesta,
-    //    };
-    //}
 }

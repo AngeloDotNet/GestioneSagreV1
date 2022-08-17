@@ -15,40 +15,26 @@ public class VersioneQueryStackService : IVersioneQueryStackService
     {
         IQueryable<VersioneEntity> baseQuery = dbContext.Versioni;
 
-        IQueryable<VersioneEntity> queryLinq = baseQuery
-            .AsNoTracking();
-
-        //List<VersioneViewModel> versioni = await queryLinq
-        //    .Select(versione => VersioneViewModel.FromEntity(versione))
-        //    .ToListAsync();
-
-        List<VersioneViewModel> versioni = await queryLinq
-            .Select(versione => versione.ToVersioneViewModel())
-            .ToListAsync();
+        var queryLinq = baseQuery.AsNoTracking();
+        var versioni = await queryLinq.Select(versione => versione.ToVersioneViewModel()).ToListAsync();
 
         return versioni;
     }
 
     public async Task<VersioneViewModel> GetVersioneAsync(string codiceVersione)
     {
-        //IQueryable<VersioneViewModel> queryLinq = dbContext.Versioni
-        //    .AsNoTracking()
-        //    .Where(versione => versione.CodiceVersione == codiceVersione)
-        //    .Select(versione => VersioneViewModel.FromEntity(versione));
-
-        IQueryable<VersioneViewModel> queryLinq = dbContext.Versioni
-            .AsNoTracking()
+        var queryLinq = dbContext.Versioni.AsNoTracking()
             .Where(versione => versione.CodiceVersione == codiceVersione)
             .Select(versione => versione.ToVersioneViewModel());
 
-        VersioneViewModel viewModel = await queryLinq.FirstOrDefaultAsync();
+        var viewModel = await queryLinq.FirstOrDefaultAsync();
 
         return viewModel;
     }
 
     public async Task<bool> IsVersioneAvailableAsync(string codiceVersione, int id)
     {
-        bool versioneExists = await dbContext.Versioni.AnyAsync(versione => EF.Functions.Like(versione.CodiceVersione, codiceVersione) && versione.Id != id);
+        var versioneExists = await dbContext.Versioni.AnyAsync(versione => EF.Functions.Like(versione.CodiceVersione, codiceVersione) && versione.Id != id);
         return !versioneExists;
     }
 }
