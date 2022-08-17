@@ -17,12 +17,15 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\CommandStack\GestioneSagre.Categorie.CommandStack\GestioneSagre.Categorie.CommandStack.csproj" />
         <ProjectReference Include="..\CommandStack\GestioneSagre.Versioni.CommandStack\GestioneSagre.Versioni.CommandStack.csproj" />
         <ProjectReference Include="..\GestioneSagre.Core\GestioneSagre.Core.csproj" />
         <ProjectReference Include="..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
         <ProjectReference Include="..\GestioneSagre.Web.Migrations\GestioneSagre.Web.Migrations.csproj" />
+        <ProjectReference Include="..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />
+        <ProjectReference Include="..\Validators\GestioneSagre.Categorie.Validators\GestioneSagre.Categorie.Validators.csproj" />
         <ProjectReference Include="..\Validators\GestioneSagre.Internal.Validators\GestioneSagre.Internal.Validators.csproj" />
         <ProjectReference Include="..\Validators\GestioneSagre.Versioni.Validators\GestioneSagre.Versioni.Validators.csproj" />
     </ItemGroup>

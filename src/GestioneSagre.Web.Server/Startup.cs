@@ -21,6 +21,8 @@ public class Startup
             .AddFluentValidation(options =>
             {
                 options.AutomaticValidationEnabled = false;
+                //GestioneSagre.Categorie.Validators
+                options.RegisterValidatorsFromAssemblyContaining<CategoriaCreateValidator>();
                 // GestioneSagre.Versioni.Validators
                 options.RegisterValidatorsFromAssemblyContaining<VersioneCreateValidator>();
                 // GestioneSagre.Internal.Validators
@@ -62,9 +64,11 @@ public class Startup
         services.AddSwaggerServices(Configuration, xmlPath);
 
         // Services TRANSIENT - GestioneSagre.XXX.CommandStack
-        services.AddTransient<CommandStackVersioneService>();
+        services.AddTransient<ICategoriaCommandStackService, CategoriaCommandStackService>();
+        services.AddTransient<VersioneCommandStackService>();
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack
+        services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
         services.AddTransient<VersioneQueryStackService>();
 
         // Services SINGLETON
