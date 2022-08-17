@@ -49,12 +49,11 @@ public class VersioneController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> GetVersioneAsync(Guid codiceVersione)
+    public async Task<IActionResult> GetVersioneAsync(string codiceVersione)
     {
         try
         {
-            var codice = codiceVersione.ToString();
-            var versione = await queryService.GetVersioneAsync(codice);
+            var versione = await queryService.GetVersioneAsync(codiceVersione);
 
             if (versione == null)
             {
