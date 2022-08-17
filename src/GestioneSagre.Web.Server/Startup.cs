@@ -62,7 +62,6 @@ public class Startup
         services.AddSwaggerServices(Configuration, xmlPath);
 
         // Services TRANSIENT - GestioneSagre.XXX.CommandStack
-        //services.AddTransient<IVersioneCommandStackService, CommandStackVersioneService>();
         services.AddTransient<CommandStackVersioneService>();
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack
