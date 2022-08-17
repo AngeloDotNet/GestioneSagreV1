@@ -5,8 +5,8 @@ namespace GestioneSagre.Categorie.QueryStack;
 public interface ICategoriaQueryStackService
 {
     Task<List<CategoriaViewModel>> GetCategorieAsync();
-    Task<CategoriaViewModel> GetCategoriaAsync(CategoriaDetailViewModel viewModel);
-    Task<CategoriaEditInputModel> GetCategoriaForEditingAsync(CategoriaDetailViewModel viewModel);
-    Task<bool> IsCategoriaAvailableAsync(CategoriaDetailViewModel viewModel);
-    Task<int> GetCountProdottiByCategoriaAsync(CategoriaDetailViewModel viewModel);
+    Task<CategoriaViewModel> GetCategoriaAsync(string guidFesta, string categoriaVideo);
+    Task<CategoriaEditInputModel> GetCategoriaForEditingAsync(string guidFesta, string categoriaVideo, int id);
+    Task<bool> IsCategoriaAvailableAsync(string guidFesta, string categoriaVideo, int id);
+    Task<int> GetCountProdottiByCategoriaAsync(string guidFesta, int categoriaId);
 }
