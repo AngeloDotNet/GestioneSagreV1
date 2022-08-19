@@ -22,7 +22,7 @@ public class VersioneController : BaseController
     /// <response code="400">Codice 400 - Bad Request</response>
     [AllowAnonymous]
     [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(List<VersioneViewModel>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> GetVersioniAsync()
     {
@@ -41,6 +41,7 @@ public class VersioneController : BaseController
     /// <summary>
     /// Dettagli di una specifica versione software
     /// </summary>
+    /// <param name="codiceVersione">Il codice Guid della versione software</param>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
     /// <response code="404">Codice 404 - Not Found</response>
@@ -71,6 +72,7 @@ public class VersioneController : BaseController
     /// <summary>
     /// Nuova versione software
     /// </summary>
+    /// <param name="inputModel">Inserisce le informazioni sulla versione software</param>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
     /// <response code="404">Codice 409 - Conflict</response>
