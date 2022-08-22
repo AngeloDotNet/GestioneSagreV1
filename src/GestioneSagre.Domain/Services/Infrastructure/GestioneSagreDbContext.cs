@@ -13,6 +13,7 @@ public partial class GestioneSagreDbContext : DbContext
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {
+        // Pre-convention model configuration goes here
         configurationBuilder.Properties<Currency>().HaveConversion<string>();
         configurationBuilder.Properties<decimal>().HaveConversion<float>();
     }
@@ -28,7 +29,8 @@ public partial class GestioneSagreDbContext : DbContext
         modelBuilder.Entity<FestaEntity>(entity =>
         {
             entity.ToTable("Festa");
-            entity.HasKey(course => course.Id);
+            entity.HasKey(festa => festa.Id);
+            entity.Property(festa => festa.StatusFesta).HasConversion<string>();
         });
 
         //Tabella VERSIONE
@@ -36,6 +38,7 @@ public partial class GestioneSagreDbContext : DbContext
         {
             entity.ToTable("Versione");
             entity.HasKey(versione => versione.Id);
+            entity.Property(versione => versione.VersioneStato).HasConversion<string>();
         });
 
         //Tabella CATEGORIE

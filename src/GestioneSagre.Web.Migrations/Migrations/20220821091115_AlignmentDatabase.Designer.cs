@@ -2,6 +2,7 @@
 using GestioneSagre.Domain.Services.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestioneSagre.Web.Migrations.Migrations
 {
     [DbContext(typeof(GestioneSagreDbContext))]
-    partial class GestioneSagreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220821091115_AlignmentDatabase")]
+    partial class AlignmentDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
@@ -148,7 +150,7 @@ namespace GestioneSagre.Web.Migrations.Migrations
 
             modelBuilder.Entity("GestioneSagre.Core.Models.Entities.ProdottoEntity", b =>
                 {
-                    b.OwnsOne("GestioneSagre.Core.Models.Entities.ProdottoEntity.Prezzo#GestioneSagre.Core.Models.ValueObjects.Money", "Prezzo", b1 =>
+                    b.OwnsOne("GestioneSagre.Core.Models.ValueObjects.Money", "Prezzo", b1 =>
                         {
                             b1.Property<int>("ProdottoEntityId")
                                 .HasColumnType("INTEGER");
@@ -162,7 +164,7 @@ namespace GestioneSagre.Web.Migrations.Migrations
 
                             b1.HasKey("ProdottoEntityId");
 
-                            b1.ToTable("Prodotto", (string)null);
+                            b1.ToTable("Prodotto");
 
                             b1.WithOwner()
                                 .HasForeignKey("ProdottoEntityId");

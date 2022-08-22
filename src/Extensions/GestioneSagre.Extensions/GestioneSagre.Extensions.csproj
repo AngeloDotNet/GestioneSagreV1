@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\CommandStack\GestioneSagre.Categorie.CommandStack\GestioneSagre.Categorie.CommandStack.csproj" />
+        <ProjectReference Include="..\..\CommandStack\GestioneSagre.Versioni.CommandStack\GestioneSagre.Versioni.CommandStack.csproj" />
+        <ProjectReference Include="..\..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
+        <ProjectReference Include="..\..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
+        <ProjectReference Include="..\..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />
+    </ItemGroup>
+
+</Project>

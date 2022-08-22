@@ -1,6 +1,5 @@
 ﻿using GestioneSagre.Core.Models.Entities;
 using GestioneSagre.Domain.Services.Infrastructure;
-using GestioneSagre.Models.InputModels.Categoria;
 using GestioneSagre.ViewExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -28,10 +27,10 @@ public class CategoriaQueryStackService : ICategoriaQueryStackService
         return categorie;
     }
 
-    public async Task<CategoriaViewModel> GetCategoriaAsync(CategoriaDetailViewModel model)
+    public async Task<CategoriaViewModel> GetCategoriaAsync(string guidFesta, string categoriaVideo)
     {
         var queryLinq = dbContext.Categorie.AsNoTracking()
-            .Where(categoria => categoria.CategoriaVideo == model.CategoriaVideo && categoria.GuidFesta == model.GuidFesta)
+            .Where(categoria => categoria.CategoriaVideo == categoriaVideo && categoria.GuidFesta == guidFesta)
             .Select(categoria => categoria.ToCategoriaViewModel());
 
         var viewModel = await queryLinq.FirstOrDefaultAsync();
@@ -39,12 +38,18 @@ public class CategoriaQueryStackService : ICategoriaQueryStackService
         return viewModel;
     }
 
-    public async Task<bool> IsCategoriaAvailableAsync(CategoriaDetailViewModel model)
+    public async Task<bool> IsCategoriaAvailableAsync(string guidFesta, string categoriaVideo, int id)
     {
-        var categoriaExists = await dbContext.Categorie.AnyAsync(x => EF.Functions.Like(x.CategoriaVideo, model.CategoriaVideo) && x.Id != model.Id);
+        var categoriaExists = await dbContext.Categorie.AnyAsync(x => EF.Functions.Like(x.CategoriaVideo, categoriaVideo)
+                                                                   && EF.Functions.Like(x.GuidFesta, guidFesta) && x.Id != id);
         return !categoriaExists;
     }
 
-    public Task<CategoriaEditInputModel> GetCategoriaForEditingAsync(CategoriaDetailViewModel viewModel) => throw new NotImplementedException();
-    public Task<int> GetCountProdottiByCategoriaAsync(CategoriaDetailViewModel viewModel) => throw new NotImplementedException();
+    public async Task<int> GetCountProdottiByCategoriaAsync(string guidFesta, int categoriaId)
+    {
+        var counter = await dbContext.Prodotti
+                            .Where(prodotto => prodotto.GuidFesta == guidFesta && prodotto.CategoriaId == categoriaId)
+                            .CountAsync();
+        return counter;
+    }
 }

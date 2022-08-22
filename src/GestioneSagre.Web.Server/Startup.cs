@@ -15,7 +15,7 @@ public class Startup
         services.AddControllersWithViews()
             .AddJsonOptions(options =>
             {
-                // Info su: https://github.com/marcominerva/MyWebApiToolbox
+                // Info su: https://github.com/marcominerva/AwesomeBackend
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             })
             .AddFluentValidation(options =>
@@ -62,18 +62,7 @@ public class Startup
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
         services.AddSwaggerServices(Configuration, xmlPath);
-
-        // Services TRANSIENT - GestioneSagre.XXX.CommandStack
-        services.AddTransient<ICategoriaCommandStackService, CategoriaCommandStackService>();
-        services.AddTransient<VersioneCommandStackService>();
-
-        // Services TRANSIENT - GestioneSagre.XXX.QueryStack
-        services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
-        services.AddTransient<VersioneQueryStackService>();
-
-        // Services SINGLETON
-        services.AddSingleton<IInternalQueryStackService, InternalQueryStackService>();
-        services.AddSingleton<IImagePersister, MagickNetImagePersister>();
+        services.AddRegisterServices(Configuration);
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
@@ -94,7 +83,10 @@ public class Startup
         if (enableSwagger)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestione Sagre v1"));
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestione Sagre v1");
+            });
         }
 
         app.UseHttpsRedirection();
