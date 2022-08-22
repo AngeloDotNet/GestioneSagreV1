@@ -4,9 +4,17 @@ public static class SwaggerServices
 {
     public static IServiceCollection AddSwaggerServices(this IServiceCollection services, IConfiguration configuration, string ExternalXmlPath)
     {
-        services.AddSwaggerGen(config =>
+        //services.AddAuthorization(options =>
+        //{
+        //    options.FallbackPolicy = options.DefaultPolicy;
+        //});
+
+        services.AddSwaggerGen(options =>
         {
-            config.SwaggerDoc("v1", new OpenApiInfo
+            options.OperationFilter<DefaultResponseOperationFilter>();
+            options.OperationFilter<AuthResponseOperationFilter>();
+
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "Gestione Sagre",
                 Version = "v1",
@@ -26,7 +34,8 @@ public static class SwaggerServices
                 }
             });
 
-            config.IncludeXmlComments(ExternalXmlPath);
+            options.UseAllOfToExtendReferenceSchemas();
+            options.IncludeXmlComments(ExternalXmlPath);
         });
 
         return services;

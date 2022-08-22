@@ -1,0 +1,10 @@
+﻿global using GestioneSagre.Categorie.CommandStack;
+global using GestioneSagre.Categorie.QueryStack;
+global using GestioneSagre.Core.Customizations.Swagger;
+global using GestioneSagre.Domain.Services.Application;
+global using GestioneSagre.Internal.QueryStack;
+global using GestioneSagre.Versioni.CommandStack;
+global using GestioneSagre.Versioni.QueryStack;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.OpenApi.Models;
