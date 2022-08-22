@@ -1,6 +1,5 @@
 ﻿using GestioneSagre.Core.Models.Entities;
 using GestioneSagre.Domain.Services.Infrastructure;
-using GestioneSagre.Models.InputModels.Categoria;
 using GestioneSagre.ViewExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -41,18 +40,16 @@ public class CategoriaQueryStackService : ICategoriaQueryStackService
 
     public async Task<bool> IsCategoriaAvailableAsync(string guidFesta, string categoriaVideo, int id)
     {
-        var categoriaExists = await dbContext.Categorie.AnyAsync(x => EF.Functions.Like(x.CategoriaVideo, categoriaVideo) && x.Id != id);
+        var categoriaExists = await dbContext.Categorie.AnyAsync(x => EF.Functions.Like(x.CategoriaVideo, categoriaVideo)
+                                                                   && EF.Functions.Like(x.GuidFesta, guidFesta) && x.Id != id);
         return !categoriaExists;
     }
-
-    //Manca implementazione
-    public Task<CategoriaEditInputModel> GetCategoriaForEditingAsync(string guidFesta, string categoriaVideo, int id) => throw new NotImplementedException();
 
     public async Task<int> GetCountProdottiByCategoriaAsync(string guidFesta, int categoriaId)
     {
         var counter = await dbContext.Prodotti
-                                .Where(prodotto => prodotto.GuidFesta == guidFesta && prodotto.CategoriaId == categoriaId)
-                                .CountAsync();
+                            .Where(prodotto => prodotto.GuidFesta == guidFesta && prodotto.CategoriaId == categoriaId)
+                            .CountAsync();
         return counter;
     }
 }
