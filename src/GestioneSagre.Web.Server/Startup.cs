@@ -62,18 +62,7 @@ public class Startup
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
         services.AddSwaggerServices(Configuration, xmlPath);
-
-        // Services TRANSIENT - GestioneSagre.XXX.CommandStack
-        services.AddTransient<ICategoriaCommandStackService, CategoriaCommandStackService>();
-        services.AddTransient<VersioneCommandStackService>();
-
-        // Services TRANSIENT - GestioneSagre.XXX.QueryStack
-        services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
-        services.AddTransient<VersioneQueryStackService>();
-
-        // Services SINGLETON
-        services.AddSingleton<IInternalQueryStackService, InternalQueryStackService>();
-        services.AddSingleton<IImagePersister, MagickNetImagePersister>();
+        services.AddRegisterServices(Configuration);
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
