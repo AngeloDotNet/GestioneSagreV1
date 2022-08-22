@@ -148,7 +148,7 @@ namespace GestioneSagre.Web.Migrations.Migrations
 
             modelBuilder.Entity("GestioneSagre.Core.Models.Entities.ProdottoEntity", b =>
                 {
-                    b.OwnsOne("GestioneSagre.Core.Models.ValueObjects.Money", "Prezzo", b1 =>
+                    b.OwnsOne("GestioneSagre.Core.Models.Entities.ProdottoEntity.Prezzo#GestioneSagre.Core.Models.ValueObjects.Money", "Prezzo", b1 =>
                         {
                             b1.Property<int>("ProdottoEntityId")
                                 .HasColumnType("INTEGER");
@@ -162,7 +162,7 @@ namespace GestioneSagre.Web.Migrations.Migrations
 
                             b1.HasKey("ProdottoEntityId");
 
-                            b1.ToTable("Prodotto");
+                            b1.ToTable("Prodotto", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("ProdottoEntityId");
