@@ -5,7 +5,7 @@ public class CategoriaCreateValidator : AbstractValidator<CategoriaCreateInputMo
     public CategoriaCreateValidator()
     {
         RuleFor(x => x.GuidFesta)
-            .NotEmpty().WithMessage("Il guid della festa è obbligatorio");
+            .NotEmpty().WithMessage("Il guid della categoria è obbligatorio");
 
         RuleFor(x => x.CategoriaVideo)
             .NotEmpty().WithMessage("La categoria video è obbligatoria");
