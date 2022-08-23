@@ -45,6 +45,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Categorie.Val
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Extensions", "src\Extensions\GestioneSagre.Extensions\GestioneSagre.Extensions.csproj", "{B5DA6256-C193-4EC7-BA91-140AC8D48BAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "Elementi di soluzione", "{37EB8E73-5A5D-442A-900F-EF73F06916CD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioneSagre.Feste.CommandStack", "src\CommandStack\GestioneSagre.Feste.CommandStack\GestioneSagre.Feste.CommandStack.csproj", "{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioneSagre.Feste.Validators", "src\Validators\GestioneSagre.Feste.Validators\GestioneSagre.Feste.Validators.csproj", "{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -247,6 +257,30 @@ Global
 		{B5DA6256-C193-4EC7-BA91-140AC8D48BAA}.Release|x64.Build.0 = Release|Any CPU
 		{B5DA6256-C193-4EC7-BA91-140AC8D48BAA}.Release|x86.ActiveCfg = Release|Any CPU
 		{B5DA6256-C193-4EC7-BA91-140AC8D48BAA}.Release|x86.Build.0 = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|x64.Build.0 = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Debug|x86.Build.0 = Debug|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|x64.ActiveCfg = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|x64.Build.0 = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|x86.ActiveCfg = Release|Any CPU
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}.Release|x86.Build.0 = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|x64.Build.0 = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|x64.ActiveCfg = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|x64.Build.0 = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +306,8 @@ Global
 		{F9C63F52-8B28-4135-935F-A001605E446F} = {928D329A-6382-4170-8D43-3908195B971B}
 		{291B8DDF-5424-418E-9752-04628A2816B0} = {A7B78B5D-9BA9-4EE2-9E74-C38A07519F85}
 		{B5DA6256-C193-4EC7-BA91-140AC8D48BAA} = {8EBE5F00-6E8E-48F6-8BF4-2F01FC2D65C2}
+		{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6} = {14BE7AE4-655A-4E53-8F69-E63BC995AB0A}
+		{C14A9D0E-CFDD-43A9-8739-0B9B009264B0} = {A7B78B5D-9BA9-4EE2-9E74-C38A07519F85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78652BA4-601C-4F05-8845-C223CA69835A}

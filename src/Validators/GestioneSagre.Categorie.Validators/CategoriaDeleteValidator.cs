@@ -7,6 +7,6 @@ public class CategoriaDeleteValidator : AbstractValidator<CategoriaDeleteInputMo
             .NotEmpty().WithMessage("L'ID è obbligatorio");
 
         RuleFor(x => x.GuidFesta)
-            .NotEmpty().WithMessage("Il guid della caegoria è obbligatorio");
+            .NotEmpty().WithMessage("Il guid della categoria è obbligatorio");
     }
 }
