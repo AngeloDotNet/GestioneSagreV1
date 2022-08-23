@@ -48,7 +48,7 @@ public class CategoriaQueryStackService : ICategoriaQueryStackService
     public async Task<int> GetCountProdottiByCategoriaAsync(string guidFesta, int categoriaId)
     {
         var counter = await dbContext.Prodotti
-                            .Where(prodotto => prodotto.GuidFesta == guidFesta && prodotto.CategoriaId == categoriaId)
+                            .Where(categoria => categoria.GuidFesta == guidFesta && categoria.CategoriaId == categoriaId)
                             .CountAsync();
         return counter;
     }
