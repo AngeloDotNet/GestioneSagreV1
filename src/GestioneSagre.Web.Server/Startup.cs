@@ -21,20 +21,8 @@ public class Startup
             });
 
         services.AddValidationServices(Configuration);
-
-        //services.AddFluentValidationAutoValidation(options =>
-        //{
-        //    options.DisableDataAnnotationsValidation = true;
-        //});
-
-        ////GestioneSagre.Categorie.Validators
-        //services.AddValidatorsFromAssemblyContaining<CategoriaCreateValidator>();
-        //// GestioneSagre.Versioni.Validators
-        //services.AddValidatorsFromAssemblyContaining<VersioneCreateValidator>();
-        //// GestioneSagre.Internal.Validators
-        //services.AddValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
-
         services.AddRazorPages();
+
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(builder =>
