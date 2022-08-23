@@ -6,6 +6,7 @@ public static class RegisterServices
     {
         // Services TRANSIENT - GestioneSagre.XXX.CommandStack
         services.AddTransient<ICategoriaCommandStackService, CategoriaCommandStackService>();
+        services.AddTransient<IFestaCommandStackService, FestaCommandStackService>();
         services.AddTransient<VersioneCommandStackService>();
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack

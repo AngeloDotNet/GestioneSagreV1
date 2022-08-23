@@ -1,10 +1,4 @@
-﻿using FluentValidation;
-using FluentValidation.AspNetCore;
-using GestioneSagre.Categorie.Validators;
-using GestioneSagre.Internal.Validators.EmailSender;
-using GestioneSagre.Versioni.Validators.Versione;
-
-namespace GestioneSagre.Extensions;
+﻿namespace GestioneSagre.Extensions;
 
 public static class ValidationServices
 {
@@ -17,8 +11,13 @@ public static class ValidationServices
 
         //GestioneSagre.Categorie.Validators
         services.AddValidatorsFromAssemblyContaining<CategoriaCreateValidator>();
+
+        //GestioneSagre.Feste.Validators
+        services.AddValidatorsFromAssemblyContaining<FestaCreateValidator>();
+
         // GestioneSagre.Versioni.Validators
         services.AddValidatorsFromAssemblyContaining<VersioneCreateValidator>();
+
         // GestioneSagre.Internal.Validators
         services.AddValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
 
