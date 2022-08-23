@@ -1,14 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
-    <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MailKit" Version="3.3.0" />
+        <PackageReference Include="SequentialGuid" Version="3.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
+    </ItemGroup>
 
 </Project>
