@@ -1,5 +1,3 @@
-using GestioneSagre.Extensions;
-
 namespace GestioneSagre.Web.Server;
 
 public class Startup
