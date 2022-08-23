@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
-      <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
+        <ProjectReference Include="..\..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
+        <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
     </ItemGroup>
 
 </Project>
