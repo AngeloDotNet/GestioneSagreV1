@@ -1,3 +1,5 @@
+using GestioneSagre.Extensions;
+
 namespace GestioneSagre.Web.Server;
 
 public class Startup
@@ -11,24 +13,26 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-#pragma warning disable CS0618 // Il tipo o il membro è obsoleto
         services.AddControllersWithViews()
             .AddJsonOptions(options =>
             {
                 // Info su: https://github.com/marcominerva/AwesomeBackend
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
-            })
-            .AddFluentValidation(options =>
-            {
-                options.AutomaticValidationEnabled = false;
-                //GestioneSagre.Categorie.Validators
-                options.RegisterValidatorsFromAssemblyContaining<CategoriaCreateValidator>();
-                // GestioneSagre.Versioni.Validators
-                options.RegisterValidatorsFromAssemblyContaining<VersioneCreateValidator>();
-                // GestioneSagre.Internal.Validators
-                options.RegisterValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
             });
-#pragma warning restore CS0618 // Il tipo o il membro è obsoleto
+
+        services.AddValidationServices(Configuration);
+
+        //services.AddFluentValidationAutoValidation(options =>
+        //{
+        //    options.DisableDataAnnotationsValidation = true;
+        //});
+
+        ////GestioneSagre.Categorie.Validators
+        //services.AddValidatorsFromAssemblyContaining<CategoriaCreateValidator>();
+        //// GestioneSagre.Versioni.Validators
+        //services.AddValidatorsFromAssemblyContaining<VersioneCreateValidator>();
+        //// GestioneSagre.Internal.Validators
+        //services.AddValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
 
         services.AddRazorPages();
         services.AddCors(options =>

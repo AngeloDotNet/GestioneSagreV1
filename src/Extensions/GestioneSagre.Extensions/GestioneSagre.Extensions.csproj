@@ -18,6 +18,9 @@
         <ProjectReference Include="..\..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
         <ProjectReference Include="..\..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
         <ProjectReference Include="..\..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />
+        <ProjectReference Include="..\..\Validators\GestioneSagre.Categorie.Validators\GestioneSagre.Categorie.Validators.csproj" />
+        <ProjectReference Include="..\..\Validators\GestioneSagre.Internal.Validators\GestioneSagre.Internal.Validators.csproj" />
+        <ProjectReference Include="..\..\Validators\GestioneSagre.Versioni.Validators\GestioneSagre.Versioni.Validators.csproj" />
     </ItemGroup>
 
 </Project>
