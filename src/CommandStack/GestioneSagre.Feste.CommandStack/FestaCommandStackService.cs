@@ -129,4 +129,12 @@ public class FestaCommandStackService : IFestaCommandStackService
         //dbContext.Remove(festa);
         //await dbContext.SaveChangesAsync();
     }
+
+    public async Task ConclusionFestaAsync(int id)
+    {
+        var festa = await dbContext.Feste.FindAsync(id);
+
+        festa.StatusFesta = FestaStato.Conclusa;
+        await dbContext.SaveChangesAsync();
+    }
 }
