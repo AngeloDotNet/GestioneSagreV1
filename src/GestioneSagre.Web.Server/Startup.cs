@@ -60,6 +60,9 @@ public class Startup
         services.AddSwaggerServices(Configuration, xmlPath);
         services.AddRegisterServices(Configuration);
 
+        // Worker services
+        services.AddSingleton<IHostedService, FestaHostedService>();
+
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
         services.Configure<SmtpOptions>(Configuration.GetSection("Smtp"));

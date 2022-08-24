@@ -20,6 +20,7 @@ global using GestioneSagre.Models.ViewModels;
 global using GestioneSagre.Versioni.CommandStack;
 global using GestioneSagre.Versioni.QueryStack;
 global using GestioneSagre.Web.Server.Controllers.Common;
+global using GestioneSagre.WorkerServices;
 global using MailKit.Security;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
