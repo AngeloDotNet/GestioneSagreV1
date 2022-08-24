@@ -76,7 +76,6 @@ public class FestaController : BaseController
     /// <param name="inputModel">Inserisce le informazioni sulla festa</param>
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
-    /// <response code="409">Codice 409 - Conflict</response>
     [AllowAnonymous]
     [HttpPost]
     [ProducesResponseType(typeof(FestaViewModel), StatusCodes.Status200OK)]
@@ -152,13 +151,11 @@ public class FestaController : BaseController
     /// <response code="200">Codice 200 - OK</response>
     /// <response code="400">Codice 400 - Bad Request</response>
     /// <response code="404">Codice 404 - Not Found</response>
-    /// <response code="409">Codice 409 - Conflict</response>
     [AllowAnonymous]
     [HttpDelete]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<IActionResult> DeleteFestaAsync(FestaDeleteInputModel inputModel)
     {
         var validation = await festaDeleteValidator.ValidateAsync(inputModel);
