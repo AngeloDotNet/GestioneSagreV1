@@ -9,6 +9,7 @@
     <ItemGroup>
         <ProjectReference Include="..\..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
         <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
+        <ProjectReference Include="..\..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
     </ItemGroup>
 
 </Project>
