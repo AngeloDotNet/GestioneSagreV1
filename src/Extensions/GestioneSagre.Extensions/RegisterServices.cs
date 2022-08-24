@@ -1,4 +1,6 @@
-﻿namespace GestioneSagre.Core.Customizations.ServiceCollection;
+﻿using GestioneSagre.Feste.QueryStack;
+
+namespace GestioneSagre.Core.Customizations.ServiceCollection;
 
 public static class RegisterServices
 {
@@ -11,6 +13,7 @@ public static class RegisterServices
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack
         services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
+        services.AddTransient<IFestaQueryStackService, FestaQueryStackService>();
         services.AddTransient<VersioneQueryStackService>();
 
         // Services SINGLETON

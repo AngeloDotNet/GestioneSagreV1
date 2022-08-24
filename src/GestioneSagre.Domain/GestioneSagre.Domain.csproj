@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Extensions\GestioneSagre.InputExtensions\GestioneSagre.InputExtensions.csproj" />
         <ProjectReference Include="..\Extensions\GestioneSagre.ViewExtensions\GestioneSagre.ViewExtensions.csproj" />
         <ProjectReference Include="..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
     </ItemGroup>

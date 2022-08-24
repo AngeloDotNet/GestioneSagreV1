@@ -1,4 +1,6 @@
-﻿namespace GestioneSagre.Models.InputModels.Festa;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace GestioneSagre.Models.InputModels.Festa;
 
 public class FestaCreateInputModel
 {
@@ -9,7 +11,8 @@ public class FestaCreateInputModel
     public string Titolo { get; set; }
     public string Edizione { get; set; }
     public string Luogo { get; set; }
-    public string Logo { get; set; }
+    //public string Logo { get; set; }
+    public IFormFile Logo { get; set; }
     public bool GestioneCoperti { get; set; }
     public bool GestioneMenu { get; set; }
     public bool StampaCarta { get; set; }
