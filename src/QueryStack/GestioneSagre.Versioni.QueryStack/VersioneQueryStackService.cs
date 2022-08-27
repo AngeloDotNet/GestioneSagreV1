@@ -3,9 +3,10 @@
 public class VersioneQueryStackService : IVersioneQueryStackService
 {
     private readonly ILogger<VersioneQueryStackService> logger;
-    private readonly GestioneSagreDbContext dbContext;
+    private readonly GestioneSagreInternalDbContext dbContext;
 
-    public VersioneQueryStackService(ILogger<VersioneQueryStackService> logger, GestioneSagreDbContext dbContext)
+    public VersioneQueryStackService(ILogger<VersioneQueryStackService> logger,
+                                     GestioneSagreInternalDbContext dbContext)
     {
         this.logger = logger;
         this.dbContext = dbContext;
