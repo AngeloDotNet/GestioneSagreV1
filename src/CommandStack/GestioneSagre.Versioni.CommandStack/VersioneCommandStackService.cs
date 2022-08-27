@@ -3,9 +3,10 @@
 public class VersioneCommandStackService : IVersioneCommandStackService
 {
     private readonly ILogger<VersioneCommandStackService> logger;
-    private readonly GestioneSagreDbContext dbContext;
+    private readonly GestioneSagreInternalDbContext dbContext;
 
-    public VersioneCommandStackService(ILogger<VersioneCommandStackService> logger, GestioneSagreDbContext dbContext)
+    public VersioneCommandStackService(ILogger<VersioneCommandStackService> logger,
+                                       GestioneSagreInternalDbContext dbContext)
     {
         this.logger = logger;
         this.dbContext = dbContext;
