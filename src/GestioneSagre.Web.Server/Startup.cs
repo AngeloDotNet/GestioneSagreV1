@@ -37,19 +37,7 @@ public class Startup
 
             optionBuilder.UseSqlite(connectionString, options =>
             {
-                // Info su: https://docs.microsoft.com/it-it/ef/core/managing-schemas/migrations/projects?tabs=dotnet-core-cli
-                // To perform a new migration you need:
-
-                // 1. Open the Package Manager Console panel
-
-                // 2. In the Default Project drop-down menu make sure that the selected project is GestioneSagre.Web.Server.
-
-                // 3. Run the command Add-Migration NAME-MIGRATION -Project GestioneSagre.Web.Migrations where NAME-MIGRATION
-                //      represents the name of the migration to create (example: InitialMigration)
-
-                // 4. Finally run the command Update-Database -Project GestioneSagre.Web.Migrations
-
-                options.MigrationsAssembly("GestioneSagre.Web.Migrations");
+                options.MigrationsAssembly("GestioneSagre.Web.Server");
             });
         });
 
@@ -65,7 +53,6 @@ public class Startup
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
-        services.Configure<SmtpOptions>(Configuration.GetSection("Smtp"));
     }
 
     public void Configure(WebApplication app)
