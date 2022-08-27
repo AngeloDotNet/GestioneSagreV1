@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Web.Server.Controllers;
+﻿namespace GestioneSagre.Web.InternalApi.Controllers;
 
 public class InternalController : BaseController
 {
@@ -18,27 +18,27 @@ public class InternalController : BaseController
         this.queryService = queryService;
     }
 
-    /// <summary>
-    /// Generazione guid
-    /// </summary>
-    /// <response code="200">Guid generato con successo</response>
-    [AllowAnonymous]
-    [HttpGet("GeneraGuid")]
-    public Task<string> GenerateGuid()
-    {
-        return queryService.GenerateGuid();
-    }
+    ///// <summary>
+    ///// Generazione guid
+    ///// </summary>
+    ///// <response code="200">Guid generato con successo</response>
+    //[AllowAnonymous]
+    //[HttpGet("GeneraGuid")]
+    //public Task<string> GenerateGuid()
+    //{
+    //    return queryService.GenerateGuid();
+    //}
 
-    /// <summary>
-    /// Generazione immagine standard
-    /// </summary>
-    /// <response code="200">Immagine default generata con successo</response>
-    [AllowAnonymous]
-    [HttpGet("GeneraImmagine")]
-    public Task<string> GenerateImageDefault()
-    {
-        return queryService.GenerateImageDefault();
-    }
+    ///// <summary>
+    ///// Generazione immagine standard
+    ///// </summary>
+    ///// <response code="200">Immagine default generata con successo</response>
+    //[AllowAnonymous]
+    //[HttpGet("GeneraImmagine")]
+    //public Task<string> GenerateImageDefault()
+    //{
+    //    return queryService.GenerateImageDefault();
+    //}
 
     /// <summary>
     /// Invio email al supporto
@@ -66,7 +66,7 @@ public class InternalController : BaseController
 
         try
         {
-            var options = this.smtpOptionsMonitor.CurrentValue;
+            var options = smtpOptionsMonitor.CurrentValue;
             var customOptions = new InputMailOptionSender
             {
                 DestinatarioNominativo = "Supporto Gestione Sagre",

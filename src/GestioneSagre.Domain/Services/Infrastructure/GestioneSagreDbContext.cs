@@ -2,12 +2,12 @@ namespace GestioneSagre.Domain.Services.Infrastructure;
 
 public partial class GestioneSagreDbContext : DbContext
 {
-    public GestioneSagreDbContext(DbContextOptions<GestioneSagreDbContext> options) : base(options)
+    public GestioneSagreDbContext(DbContextOptions<GestioneSagreDbContext> options)
+        : base(options)
     {
     }
 
     public virtual DbSet<FestaEntity> Feste { get; set; }
-    public virtual DbSet<VersioneEntity> Versioni { get; set; }
     public virtual DbSet<CategoriaEntity> Categorie { get; set; }
     public virtual DbSet<ProdottoEntity> Prodotti { get; set; }
 
@@ -31,14 +31,6 @@ public partial class GestioneSagreDbContext : DbContext
             entity.ToTable("Festa");
             entity.HasKey(festa => festa.Id);
             entity.Property(festa => festa.StatusFesta).HasConversion<string>();
-        });
-
-        //Tabella VERSIONE
-        modelBuilder.Entity<VersioneEntity>(entity =>
-        {
-            entity.ToTable("Versione");
-            entity.HasKey(versione => versione.Id);
-            entity.Property(versione => versione.VersioneStato).HasConversion<string>();
         });
 
         //Tabella CATEGORIE

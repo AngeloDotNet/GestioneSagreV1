@@ -2,32 +2,32 @@
 
 #nullable disable
 
-namespace GestioneSagre.Web.Migrations.Migrations
+namespace GestioneSagre.Web.InternalApi.Migrations
 {
-    public partial class AddTabellaCategoria : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categoria",
+                name: "Versione",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    GuidFesta = table.Column<string>(type: "TEXT", nullable: true),
-                    CategoriaVideo = table.Column<string>(type: "TEXT", nullable: true),
-                    CategoriaStampa = table.Column<string>(type: "TEXT", nullable: true)
+                    CodiceVersione = table.Column<string>(type: "TEXT", nullable: true),
+                    TestoVersione = table.Column<string>(type: "TEXT", nullable: true),
+                    VersioneStato = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categoria", x => x.Id);
+                    table.PrimaryKey("PK_Versione", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Categoria");
+                name: "Versione");
         }
     }
 }

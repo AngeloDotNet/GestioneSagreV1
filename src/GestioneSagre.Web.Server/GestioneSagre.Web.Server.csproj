@@ -22,7 +22,7 @@
         <ProjectReference Include="..\Extensions\GestioneSagre.Extensions\GestioneSagre.Extensions.csproj" />
         <ProjectReference Include="..\GestioneSagre.Core\GestioneSagre.Core.csproj" />
         <ProjectReference Include="..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
-        <ProjectReference Include="..\GestioneSagre.Web.Migrations\GestioneSagre.Web.Migrations.csproj" />
+        <ProjectReference Include="..\GestioneSagre.WorkerServices\GestioneSagre.WorkerServices.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />

@@ -2,18 +2,16 @@
 using GestioneSagre.Domain.Services.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GestioneSagre.Web.Migrations.Migrations
+namespace GestioneSagre.Web.Server.Migrations
 {
     [DbContext(typeof(GestioneSagreDbContext))]
-    [Migration("20220814164140_AddTabellaProdotto")]
-    partial class AddTabellaProdotto
+    partial class GestioneSagreDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
@@ -77,8 +75,9 @@ namespace GestioneSagre.Web.Migrations.Migrations
                     b.Property<bool>("StampaRicevuta")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("StatusFesta")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("StatusFesta")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titolo")
                         .HasColumnType("TEXT");
@@ -124,26 +123,6 @@ namespace GestioneSagre.Web.Migrations.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Prodotto", (string)null);
-                });
-
-            modelBuilder.Entity("GestioneSagre.Core.Models.Entities.VersioneEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CodiceVersione")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TestoVersione")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("VersioneStato")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Versione", (string)null);
                 });
 
             modelBuilder.Entity("GestioneSagre.Core.Models.Entities.ProdottoEntity", b =>

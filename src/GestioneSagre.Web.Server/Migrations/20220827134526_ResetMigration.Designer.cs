@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GestioneSagre.Web.Migrations.Migrations
+namespace GestioneSagre.Web.Server.Migrations
 {
     [DbContext(typeof(GestioneSagreDbContext))]
-    [Migration("20220814164051_AddTabellaCategoria")]
-    partial class AddTabellaCategoria
+    [Migration("20220827134526_ResetMigration")]
+    partial class ResetMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,8 +77,9 @@ namespace GestioneSagre.Web.Migrations.Migrations
                     b.Property<bool>("StampaRicevuta")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("StatusFesta")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("StatusFesta")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titolo")
                         .HasColumnType("TEXT");
@@ -88,24 +89,67 @@ namespace GestioneSagre.Web.Migrations.Migrations
                     b.ToTable("Festa", (string)null);
                 });
 
-            modelBuilder.Entity("GestioneSagre.Core.Models.Entities.VersioneEntity", b =>
+            modelBuilder.Entity("GestioneSagre.Core.Models.Entities.ProdottoEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CodiceVersione")
+                    b.Property<bool>("AvvisoScorta")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("GuidFesta")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TestoVersione")
+                    b.Property<bool>("Prenotazione")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Prodotto")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("VersioneStato")
+                    b.Property<bool>("ProdottoAttivo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantita")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("QuantitaAttiva")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("QuantitaScorta")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Versione", (string)null);
+                    b.ToTable("Prodotto", (string)null);
+                });
+
+            modelBuilder.Entity("GestioneSagre.Core.Models.Entities.ProdottoEntity", b =>
+                {
+                    b.OwnsOne("GestioneSagre.Core.Models.ValueObjects.Money", "Prezzo", b1 =>
+                        {
+                            b1.Property<int>("ProdottoEntityId")
+                                .HasColumnType("INTEGER");
+
+                            b1.Property<float>("Amount")
+                                .HasColumnType("REAL");
+
+                            b1.Property<string>("Currency")
+                                .IsRequired()
+                                .HasColumnType("TEXT");
+
+                            b1.HasKey("ProdottoEntityId");
+
+                            b1.ToTable("Prodotto");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProdottoEntityId");
+                        });
+
+                    b.Navigation("Prezzo");
                 });
 #pragma warning restore 612, 618
         }

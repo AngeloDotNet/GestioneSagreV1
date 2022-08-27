@@ -1,4 +1,4 @@
-namespace GestioneSagre.Web.Server;
+namespace GestioneSagre.Web.InternalApi;
 
 public class Startup
 {
@@ -11,15 +11,14 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllersWithViews()
+
+        services.AddControllers()
             .AddJsonOptions(options =>
             {
-                // Info su: https://github.com/marcominerva/AwesomeBackend
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
         services.AddValidationServices(Configuration);
-        services.AddRazorPages();
 
         services.AddCors(options =>
         {
@@ -31,13 +30,13 @@ public class Startup
             });
         });
 
-        services.AddDbContextPool<GestioneSagreDbContext>(optionBuilder =>
+        services.AddDbContextPool<GestioneSagreInternalDbContext>(optionBuilder =>
         {
             var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
 
             optionBuilder.UseSqlite(connectionString, options =>
             {
-                options.MigrationsAssembly("GestioneSagre.Web.Server");
+                options.MigrationsAssembly("GestioneSagre.Web.InternalApi");
             });
         });
 
@@ -45,14 +44,12 @@ public class Startup
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
         // Customized services
-        services.AddSwaggerServices(Configuration, xmlPath);
-        services.AddRegisterServices(Configuration);
-
-        // Worker services
-        services.AddSingleton<IHostedService, FestaHostedService>();
+        services.AddInternalSwaggerServices(Configuration, xmlPath);
+        services.AddRegisterInternalServices(Configuration);
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
+        services.Configure<SmtpOptions>(Configuration.GetSection("Smtp"));
     }
 
     public void Configure(WebApplication app)
@@ -61,7 +58,7 @@ public class Startup
 
         if (env.IsDevelopment())
         {
-            app.UseWebAssemblyDebugging();
+            app.UseDeveloperExceptionPage();
         }
 
         var enableSwagger = Configuration.GetSection("Swagger").GetValue<bool>("enabled");
@@ -76,17 +73,12 @@ public class Startup
         }
 
         app.UseHttpsRedirection();
-        app.UseBlazorFrameworkFiles();
-
-        app.UseStaticFiles();
         app.UseRouting();
 
         app.UseCors();
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapRazorPages();
             endpoints.MapControllers();
-            endpoints.MapFallbackToFile("index.html");
         });
     }
 }

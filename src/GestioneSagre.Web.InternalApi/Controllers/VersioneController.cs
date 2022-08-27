@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Web.Server.Controllers;
+﻿namespace GestioneSagre.Web.InternalApi.Controllers;
 
 public class VersioneController : BaseController
 {
@@ -6,12 +6,12 @@ public class VersioneController : BaseController
     private readonly IVersioneQueryStackService queryService;
     private readonly IValidator<VersioneCreateInputModel> versioneCreateValidator;
 
-    public VersioneController(VersioneCommandStackService commandVersioneService,
-                              VersioneQueryStackService queryVersioneService,
+    public VersioneController(IVersioneCommandStackService commandVersioneService,
+                              IVersioneQueryStackService queryVersioneService,
                               IValidator<VersioneCreateInputModel> versioneCreateValidator)
     {
-        this.commandService = commandVersioneService;
-        this.queryService = queryVersioneService;
+        commandService = commandVersioneService;
+        queryService = queryVersioneService;
         this.versioneCreateValidator = versioneCreateValidator;
     }
 

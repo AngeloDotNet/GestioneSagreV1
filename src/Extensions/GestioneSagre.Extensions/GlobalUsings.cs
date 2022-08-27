@@ -6,6 +6,7 @@ global using GestioneSagre.Categorie.Validators;
 global using GestioneSagre.Core.Customizations.Swagger;
 global using GestioneSagre.Domain.Services.Application;
 global using GestioneSagre.Feste.CommandStack;
+global using GestioneSagre.Feste.QueryStack;
 global using GestioneSagre.Feste.Validators;
 global using GestioneSagre.Internal.QueryStack;
 global using GestioneSagre.Internal.Validators.EmailSender;

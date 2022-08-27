@@ -18,52 +18,25 @@ public class FestaCommandStackService : IFestaCommandStackService
 
     public async Task<FestaViewModel> CreateFestaAsync(FestaCreateInputModel inputModel)
     {
-        string imageName = await internalQueryStackService.GenerateGuid();
+        var guidFesta = await internalQueryStackService.GenerateGuid();
+        var imageFesta = await internalQueryStackService.GenerateImageDefault();
 
-        FestaEntity festa = new();
-
-        if (inputModel.Logo != null)
+        FestaEntity festa = new()
         {
-            var imageFesta = await imagePersister.SaveImageAsync(imageName, "jpg", "images", inputModel.Logo);
-
-            festa = new()
-            {
-                GuidFesta = inputModel.GuidFesta,
-                DataInizio = inputModel.DataInizio,
-                DataFine = inputModel.DataFine,
-                Titolo = inputModel.Titolo,
-                Edizione = inputModel.Edizione,
-                Luogo = inputModel.Luogo,
-                //Logo = inputModel.Logo,
-                Logo = imageFesta,
-                GestioneCoperti = inputModel.GestioneCoperti,
-                GestioneMenu = inputModel.GestioneMenu,
-                StampaCarta = inputModel.StampaCarta,
-                StampaLogo = inputModel.StampaLogo,
-                StampaRicevuta = inputModel.StampaRicevuta,
-                StatusFesta = inputModel.StatusFesta
-            };
-        }
-        else
-        {
-            festa = new()
-            {
-                GuidFesta = inputModel.GuidFesta,
-                DataInizio = inputModel.DataInizio,
-                DataFine = inputModel.DataFine,
-                Titolo = inputModel.Titolo,
-                Edizione = inputModel.Edizione,
-                Luogo = inputModel.Luogo,
-                //Logo = inputModel.Logo,
-                //Logo = imageFesta,
-                GestioneCoperti = inputModel.GestioneCoperti,
-                GestioneMenu = inputModel.GestioneMenu,
-                StampaCarta = inputModel.StampaCarta,
-                StampaLogo = inputModel.StampaLogo,
-                StampaRicevuta = inputModel.StampaRicevuta,
-                StatusFesta = inputModel.StatusFesta
-            };
-        }
+            GuidFesta = guidFesta, //GuidFesta = inputModel.GuidFesta,
+            DataInizio = inputModel.DataInizio,
+            DataFine = inputModel.DataFine,
+            Titolo = inputModel.Titolo,
+            Edizione = inputModel.Edizione,
+            Luogo = inputModel.Luogo,
+            Logo = imageFesta, //Logo = inputModel.Logo,
+            GestioneCoperti = inputModel.GestioneCoperti,
+            GestioneMenu = inputModel.GestioneMenu,
+            StampaCarta = inputModel.StampaCarta,
+            StampaLogo = inputModel.StampaLogo,
+            StampaRicevuta = inputModel.StampaRicevuta,
+            StatusFesta = inputModel.StatusFesta
+        };
 
         dbContext.Add(festa);
         await dbContext.SaveChangesAsync();
@@ -86,8 +59,7 @@ public class FestaCommandStackService : IFestaCommandStackService
             festa.Titolo = inputModel.Titolo;
             festa.Edizione = inputModel.Edizione;
             festa.Luogo = inputModel.Luogo;
-            //festa.Logo = inputModel.Logo;
-            festa.Logo = imageFesta;
+            festa.Logo = imageFesta; //festa.Logo = inputModel.Logo;
             festa.GestioneCoperti = inputModel.GestioneCoperti;
             festa.GestioneMenu = inputModel.GestioneMenu;
             festa.StampaCarta = inputModel.StampaCarta;
@@ -128,5 +100,13 @@ public class FestaCommandStackService : IFestaCommandStackService
         // Cancello la festa fisicamente dal database
         //dbContext.Remove(festa);
         //await dbContext.SaveChangesAsync();
+    }
+
+    public async Task ConclusionFestaAsync(int id)
+    {
+        var festa = await dbContext.Feste.FindAsync(id);
+
+        festa.StatusFesta = FestaStato.Conclusa;
+        await dbContext.SaveChangesAsync();
     }
 }
