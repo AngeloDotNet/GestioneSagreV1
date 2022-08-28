@@ -23,6 +23,7 @@
         <ProjectReference Include="..\..\Validators\GestioneSagre.Categorie.Validators\GestioneSagre.Categorie.Validators.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Feste.Validators\GestioneSagre.Feste.Validators.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Internal.Validators\GestioneSagre.Internal.Validators.csproj" />
+        <ProjectReference Include="..\..\Validators\GestioneSagre.Prodotti.Validators\GestioneSagre.Prodotti.Validators.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Versioni.Validators\GestioneSagre.Versioni.Validators.csproj" />
     </ItemGroup>
 

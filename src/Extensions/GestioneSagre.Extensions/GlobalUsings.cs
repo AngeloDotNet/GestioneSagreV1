@@ -10,6 +10,7 @@ global using GestioneSagre.Feste.QueryStack;
 global using GestioneSagre.Feste.Validators;
 global using GestioneSagre.Internal.QueryStack;
 global using GestioneSagre.Internal.Validators.EmailSender;
+global using GestioneSagre.Prodotti.Validators;
 global using GestioneSagre.Versioni.CommandStack;
 global using GestioneSagre.Versioni.QueryStack;
 global using GestioneSagre.Versioni.Validators.Versione;
