@@ -9,6 +9,7 @@
     │   └── GestioneSagre.Versioni.CommandStack
     ├── Extensions
     │   ├── GestioneSagre.Extensions
+    │   ├── GestioneSagre.Internal.Extensions
     │   └── GestioneSagre.ViewExtensions
     ├── QueryStack
     │   ├── GestioneSagre.Categorie.QueryStack
