@@ -15,9 +15,6 @@ public static class ValidationServices
         //GestioneSagre.Feste.Validators
         services.AddValidatorsFromAssemblyContaining<FestaCreateValidator>();
 
-        // GestioneSagre.Versioni.Validators
-        services.AddValidatorsFromAssemblyContaining<VersioneCreateValidator>();
-
         // GestioneSagre.Prodotti.Validators
         services.AddValidatorsFromAssemblyContaining<ProdottoCreateValidator>();
 
