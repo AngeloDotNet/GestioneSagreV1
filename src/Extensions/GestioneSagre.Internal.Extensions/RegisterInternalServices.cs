@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Extensions;
+﻿namespace GestioneSagre.Internal.Extensions;
 
 public static class RegisterInternalServices
 {

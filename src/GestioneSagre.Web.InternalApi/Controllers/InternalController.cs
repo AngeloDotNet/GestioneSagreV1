@@ -3,9 +3,7 @@
 public class InternalController : BaseController
 {
     private readonly IInternalQueryStackService queryService;
-    private readonly IOptionsMonitor<SmtpOptions> smtpOptionsMonitor;
     private readonly ILogger<InternalController> logger;
-    private readonly IValidator<MailSupportoInputSender> mailSupportoValidator;
 
     public InternalController(ILogger<InternalController> logger, IInternalQueryStackService queryService)
     {
