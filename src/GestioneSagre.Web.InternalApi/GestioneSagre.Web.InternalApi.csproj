@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Extensions\GestioneSagre.Extensions\GestioneSagre.Extensions.csproj" />
+      <ProjectReference Include="..\Extensions\GestioneSagre.Internal.Extensions\GestioneSagre.Internal.Extensions.csproj" />
       <ProjectReference Include="..\GestioneSagre.Core\GestioneSagre.Core.csproj" />
       <ProjectReference Include="..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
     </ItemGroup>

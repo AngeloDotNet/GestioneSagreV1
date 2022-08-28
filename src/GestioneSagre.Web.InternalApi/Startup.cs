@@ -44,7 +44,7 @@ public class Startup
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
         // Customized services
-        services.AddInternalSwaggerServices(Configuration, xmlPath);
+        services.AddSwaggerInternalServices(Configuration, xmlPath);
         services.AddRegisterInternalServices(Configuration);
 
         // Options
