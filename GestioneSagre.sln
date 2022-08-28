@@ -45,6 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "El
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		README.md = README.md
+		structure-project.txt = structure-project.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Feste.CommandStack", "src\CommandStack\GestioneSagre.Feste.CommandStack\GestioneSagre.Feste.CommandStack.csproj", "{F73ECA63-30C1-4BE2-9B9D-9CA1E1115CD6}"
@@ -57,7 +58,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.WorkerService
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Web.InternalApi", "src\GestioneSagre.Web.InternalApi\GestioneSagre.Web.InternalApi.csproj", "{06344C74-378A-4A9D-B91D-3F5F2426AE45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioneSagre.Prodotti.Validators", "src\Validators\GestioneSagre.Prodotti.Validators\GestioneSagre.Prodotti.Validators.csproj", "{6F7909A7-A205-44FB-AC60-F2EC098CB1AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Prodotti.Validators", "src\Validators\GestioneSagre.Prodotti.Validators\GestioneSagre.Prodotti.Validators.csproj", "{6F7909A7-A205-44FB-AC60-F2EC098CB1AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
