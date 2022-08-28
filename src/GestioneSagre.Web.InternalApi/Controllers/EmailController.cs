@@ -9,11 +9,13 @@ public class EmailController : BaseController
 
     public EmailController(IOptionsMonitor<SmtpOptions> smtpOptionsMonitor,
                            ILogger<InternalController> logger,
-                           IValidator<MailSupportoInputSender> mailSupportoValidator)
+                           IValidator<MailSupportoInputSender> mailSupportoValidator,
+                           IInternalQueryStackService queryService)
     {
         this.smtpOptionsMonitor = smtpOptionsMonitor;
         this.logger = logger;
         this.mailSupportoValidator = mailSupportoValidator;
+        this.queryService = queryService;
     }
 
     /// <summary>
