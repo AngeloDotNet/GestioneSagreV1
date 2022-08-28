@@ -14,7 +14,6 @@ public class Startup
         services.AddControllersWithViews()
             .AddJsonOptions(options =>
             {
-                // Info su: https://github.com/marcominerva/AwesomeBackend
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
