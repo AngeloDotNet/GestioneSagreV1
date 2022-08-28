@@ -18,7 +18,7 @@ public class Startup
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
-        services.AddValidationServices(Configuration);
+        services.AddValidationInternalServices(Configuration);
 
         services.AddCors(options =>
         {

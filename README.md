@@ -24,6 +24,11 @@ Free software that allows the web management of festivals and village festivals 
 **Graphics:** Bootstrap 5.2.0, Font Awesome Free 6.1.1
 
 
+## Documentation
+
+To see the structure of this project [click here](https://github.com/AngeloDotNet/GestioneSagre2/blob/master/structure-project.txt).
+
+
 ## Run Locally
 
 Clone the project

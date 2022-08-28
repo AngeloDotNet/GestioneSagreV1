@@ -18,8 +18,8 @@ public static class ValidationServices
         // GestioneSagre.Versioni.Validators
         services.AddValidatorsFromAssemblyContaining<VersioneCreateValidator>();
 
-        // GestioneSagre.Internal.Validators
-        services.AddValidatorsFromAssemblyContaining<MailSupportoSenderValidator>();
+        // GestioneSagre.Prodotti.Validators
+        services.AddValidatorsFromAssemblyContaining<ProdottoCreateValidator>();
 
         return services;
     }
