@@ -6,10 +6,12 @@ public static class RegisterServices
     {
         // Services TRANSIENT - GestioneSagre.XXX.CommandStack
         services.AddTransient<ICategoriaCommandStackService, CategoriaCommandStackService>();
+        services.AddTransient<IProdottoCommandStackService, ProdottoCommandStackService>();
         services.AddTransient<IFestaCommandStackService, FestaCommandStackService>();
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack
         services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
+        services.AddTransient<IProdottoQueryStackService, ProdottoQueryStackService>();
         services.AddTransient<IFestaQueryStackService, FestaQueryStackService>();
 
         // Services SINGLETON

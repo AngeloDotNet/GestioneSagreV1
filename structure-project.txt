@@ -15,6 +15,7 @@
     │   ├── GestioneSagre.Categorie.QueryStack
     │   ├── GestioneSagre.Feste.QueryStack
     │   ├── GestioneSagre.Internal.QueryStack
+    │   ├── GestioneSagre.Prodotti.QueryStack
     │   └── GestioneSagre.Versioni.QueryStack
     ├── Validators
     │   ├── GestioneSagre.Categorie.Validators
