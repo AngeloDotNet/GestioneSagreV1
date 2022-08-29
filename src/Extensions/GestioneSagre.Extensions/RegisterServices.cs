@@ -10,6 +10,7 @@ public static class RegisterServices
 
         // Services TRANSIENT - GestioneSagre.XXX.QueryStack
         services.AddTransient<ICategoriaQueryStackService, CategoriaQueryStackService>();
+        services.AddTransient<IProdottoQueryStackService, ProdottoQueryStackService>();
         services.AddTransient<IFestaQueryStackService, FestaQueryStackService>();
 
         // Services SINGLETON

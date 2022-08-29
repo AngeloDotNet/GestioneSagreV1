@@ -17,6 +17,7 @@
         <ProjectReference Include="..\..\CommandStack\GestioneSagre.Feste.CommandStack\GestioneSagre.Feste.CommandStack.csproj" />
         <ProjectReference Include="..\..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
         <ProjectReference Include="..\..\QueryStack\GestioneSagre.Feste.QueryStack\GestioneSagre.Feste.QueryStack.csproj" />
+        <ProjectReference Include="..\..\QueryStack\GestioneSagre.Prodotti.QueryStack\GestioneSagre.Prodotti.QueryStack.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Categorie.Validators\GestioneSagre.Categorie.Validators.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Feste.Validators\GestioneSagre.Feste.Validators.csproj" />
         <ProjectReference Include="..\..\Validators\GestioneSagre.Prodotti.Validators\GestioneSagre.Prodotti.Validators.csproj" />

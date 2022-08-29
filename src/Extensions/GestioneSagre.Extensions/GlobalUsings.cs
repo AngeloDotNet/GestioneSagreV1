@@ -8,6 +8,7 @@ global using GestioneSagre.Domain.Services.Application;
 global using GestioneSagre.Feste.CommandStack;
 global using GestioneSagre.Feste.QueryStack;
 global using GestioneSagre.Feste.Validators;
+global using GestioneSagre.Prodotti.QueryStack;
 global using GestioneSagre.Prodotti.Validators;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
