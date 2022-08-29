@@ -22,7 +22,7 @@ public class AppBase : ComponentBase, IDisposable
                 //    {
                 //        var assemblies = await AssemblyLoader.LoadAssembliesAsync(new List<string>
                 //        {
-                //            "GestioneSagre.Module.Init.dll" //Configurazione festa
+                //            "GestioneSagre.Module.Init.dll" //Configurazione festa, impostazioni, logo
                 //        });
                 //        LazyLoadedAssemblies.AddRange(assemblies);
                 //        break;
@@ -32,7 +32,7 @@ public class AppBase : ComponentBase, IDisposable
                 //    {
                 //        var assemblies = await AssemblyLoader.LoadAssembliesAsync(new List<string>
                 //        {
-                //            "GestioneSagre.Module.Configuration.dll" //Configurazione Prodotti, Categorie, Logo, Menu
+                //            "GestioneSagre.Module.Configuration.dll" //Configurazione categorie, prodotti, menu
                 //        });
                 //        LazyLoadedAssemblies.AddRange(assemblies);
                 //        break;
@@ -42,7 +42,7 @@ public class AppBase : ComponentBase, IDisposable
                 //    {
                 //        var assemblies = await AssemblyLoader.LoadAssembliesAsync(new List<string>
                 //        {
-                //            "GestioneSagre.Module.Users.dll" //Configurazione Operatori (Ruoli e permessi)
+                //            "GestioneSagre.Module.Users.dll" //Configurazione operatori (Ruoli e permessi)
                 //        });
                 //        LazyLoadedAssemblies.AddRange(assemblies);
                 //        break;
@@ -62,7 +62,7 @@ public class AppBase : ComponentBase, IDisposable
                 //    {
                 //        var assemblies = await AssemblyLoader.LoadAssembliesAsync(new List<string>
                 //        {
-                //            "GestioneSagre.Module.Receipt.dll" //Gestione dello scontrino, movimenti cassa, prenotazioni
+                //            "GestioneSagre.Module.Receipt.dll" //Gestione dello scontrino, movimenti cassa (duplicato cassa ?), prenotazioni (duplicato cassa ?)
                 //        });
                 //        LazyLoadedAssemblies.AddRange(assemblies);
                 //        break;

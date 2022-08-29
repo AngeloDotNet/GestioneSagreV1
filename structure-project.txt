@@ -1,31 +1,76 @@
 ﻿GestioneSagre
+|
 ├── editorconfig
+│
 ├── README
+│
 ├── Structure Project
-└── Src
+│
+└── Src (27 di 40 progetti sviluppati)
+    │
+    ├── ClientModules
+    │   ├── GestioneSagre.Module.App
+    │   ├── GestioneSagre.Module.Init (*)
+    │   ├── GestioneSagre.Module.Configuration (*)
+    │   ├── GestioneSagre.Module.Users (*)
+    │   ├── GestioneSagre.Module.Store (*)
+    │   ├── GestioneSagre.Module.Receipt (*)
+    │   ├── GestioneSagre.Module.Prints (*)
+    │   ├── GestioneSagre.Module.Statistics (*)
+    │   └── GestioneSagre.Module.Dashboard (*)
+    │
     ├── CommandStack
     │   ├── GestioneSagre.Categorie.CommandStack
     │   ├── GestioneSagre.Feste.CommandStack
+    │   ├── GestioneSagre.Prodotti.CommandStack
     │   └── GestioneSagre.Versioni.CommandStack
+    │
     ├── Extensions
     │   ├── GestioneSagre.Extensions
     │   ├── GestioneSagre.Internal.Extensions
     │   └── GestioneSagre.ViewExtensions
+    │
     ├── QueryStack
     │   ├── GestioneSagre.Categorie.QueryStack
     │   ├── GestioneSagre.Feste.QueryStack
     │   ├── GestioneSagre.Internal.QueryStack
     │   ├── GestioneSagre.Prodotti.QueryStack
     │   └── GestioneSagre.Versioni.QueryStack
+    │
     ├── Validators
     │   ├── GestioneSagre.Categorie.Validators
     │   ├── GestioneSagre.Feste.Validators
     │   ├── GestioneSagre.Internal.Validators
     │   ├── GestioneSagre.Prodotti.Validators
     │   └── GestioneSagre.Versioni.Validators
+    │
+    ├── WorkerServices
+    │   ├── GestioneSagre.Prodotti.WorkerService (*)
+    │   └── GestioneSagre.Festa.WorkerService
+    │
+    ├── Exra
+    │   ├── GestioneSagre.Localization (*)
+    │   ├── GestioneSagre.TelegramBot (*)
+    │   └── GestioneSagre.UnitTest (*)
+    │
     ├── GestioneSagre.Core
+    │
     ├── GestioneSagre.Domain
+    │
     ├── GestioneSagre.Models
-    ├── GestioneSagre.Web.InternalApi
-    ├── GestioneSagre.Web.Server
-    └── GestioneSagre.WorkerService
+    │
+    ├── GestioneSagre.Web.Client
+    │
+    ├── GestioneSagre.Web.Components
+    │
+    ├── GestioneSagre.Web.InternalApi (#)
+    │
+    ├── GestioneSagre.Web.Server (#)
+    │
+    ├── GestioneSagre.Security (*)
+    │
+    └── GestioneSagre.Web.Shared
+
+
+(*) = da sviluppare
+(#) = progetto d'avvio
