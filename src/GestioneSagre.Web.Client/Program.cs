@@ -1,5 +1,4 @@
-using GestioneSagre.Web.Shared.Services.Configurazione;
-using GestioneSagre.Web.Shared.Services.Versione;
+using GestioneSagre.Web.Shared.Extensions;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor;
@@ -21,8 +20,7 @@ namespace GestioneSagre.Web.Client
                 BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
             });
 
-            builder.Services.AddTransient<IConfigurazioneService, ConfigurazioneService>();
-            builder.Services.AddTransient<IVersioneService, VersioneService>();
+            builder.Services.AddRegisterClientServices();
 
             builder.Services.AddMudServices(config =>
             {

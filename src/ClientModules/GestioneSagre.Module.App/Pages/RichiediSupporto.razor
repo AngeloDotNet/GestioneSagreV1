@@ -1,0 +1,101 @@
+﻿@page "/RichiediSupporto"
+@using GestioneSagre.Web.Components
+@using GestioneSagre.Web.Shared.Models.InputSender
+@using GestioneSagre.Web.Shared.Services.Supporto
+@using Microsoft.AspNetCore.Components.Forms
+@using MudBlazor
+@inject ISupportoService supportoService
+
+<CustomBreadCrumb voiceMenu="@MenuBoard" />
+
+<h1>Richiesta di supporto</h1>
+<div class="testoJustify"><br /></div>
+
+<CustomAlert severity="Severity.Warning" dense="true" testo="<b>ATTENZIONE:</b> Per inviare la richiesta di supporto, &egrave; necessaria una connessione ad internet attiva." />
+<div class="testoJustify"><br /></div>
+
+<AlertMessage tipoAlert="@typeAlert" testo="@textAlert"></AlertMessage>
+<div class="testoJustify"><br /></div>
+
+<EditForm Model="@model" OnValidSubmit="Submit">
+    <div class="row">
+        <div class="col-md-8"><DataAnnotationsValidator />
+        <ValidationSummary /></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8"><br /></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group mb-3">
+                <MudTextField @bind-Value="model.MittenteNominativo" Label="Nominativo" HelperText="Inserire il proprio cognome e nome" Variant="Variant.Outlined" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group mb-3">
+                <MudTextField @bind-Value="model.MittenteEmail" Label="Indirizzo email" HelperText="Inserire il proprio indirizzo email" Variant="Variant.Outlined" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group mb-3">
+                <MudTextField @bind-Value="model.Messaggio" Label="Messaggio" HelperText="Inserire la richiesta di supporto" Lines="5" Variant="Variant.Outlined" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-outline-primary"><i class="fas fa-paper-plane"></i> Invia richiesta</button>
+        <button type="button" class="btn btn-outline-secondary ml-5" @onclick="Cancel"><i class="fas fa-reply"></i> Annulla</button>
+    </div>
+</EditForm>
+
+@code {
+    private MailSupportoInputSender model = new();
+
+    private string typeAlert = string.Empty;
+    private string textAlert = string.Empty;
+
+    public string MenuBoard = "Gestione Sagre;Richiedi Supporto";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        ResetForm();
+    }
+
+    private async Task Submit()
+    {
+        try
+        {
+            await supportoService.InvioEmailSupportoAsync(model);
+
+            typeAlert = "confirm";
+            textAlert = "Richiesta di supporto inviata con successo !";
+
+            ResetForm();
+        }
+        catch (Exception ex)
+        {
+            typeAlert = "error";
+            textAlert = ex.Message;
+        }
+    }
+
+    private void Cancel()
+    {
+        ResetForm();
+    }
+
+    private void ResetForm()
+    {
+        model = new()
+        {
+            MittenteNominativo = string.Empty,
+            MittenteEmail = string.Empty,
+            Messaggio = string.Empty
+        };
+    }
+}
