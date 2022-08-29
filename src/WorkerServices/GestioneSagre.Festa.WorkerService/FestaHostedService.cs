@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.WorkerServices;
+﻿namespace GestioneSagre.Festa.WorkerService;
 
 public class FestaHostedService : IHostedService, IDisposable
 {
@@ -34,7 +34,7 @@ public class FestaHostedService : IHostedService, IDisposable
                     {
                         foreach (var item in listaEventi)
                         {
-                            DateTime dataFineFesta = Convert.ToDateTime(item.DataFine);
+                            var dataFineFesta = Convert.ToDateTime(item.DataFine);
 
                             if (dataOdierna > dataFineFesta)
                             {
