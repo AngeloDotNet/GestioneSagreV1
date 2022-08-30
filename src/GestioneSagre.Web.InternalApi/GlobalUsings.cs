@@ -8,7 +8,7 @@ global using GestioneSagre.Internal.Extensions;
 global using GestioneSagre.Internal.QueryStack;
 global using GestioneSagre.Models.InputModels.Versione;
 global using GestioneSagre.Models.InputSender;
-global using GestioneSagre.Models.ViewModels;
+global using GestioneSagre.Models.ViewModel;
 global using GestioneSagre.Versioni.CommandStack;
 global using GestioneSagre.Versioni.QueryStack;
 global using GestioneSagre.Web.InternalApi.Controllers.Common;

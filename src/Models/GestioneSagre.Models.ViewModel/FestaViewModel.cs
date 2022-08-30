@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Models.ViewModels;
+﻿namespace GestioneSagre.Models.ViewModel;
 
 public class FestaViewModel
 {

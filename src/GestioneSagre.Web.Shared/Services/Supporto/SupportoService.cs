@@ -1,7 +1,4 @@
-﻿using System.Net.Http.Json;
-using GestioneSagre.Web.Shared.Services.Configurazione;
-
-namespace GestioneSagre.Web.Shared.Services.Supporto;
+﻿namespace GestioneSagre.Web.Shared.Services.Supporto;
 
 public class SupportoService : ISupportoService
 {

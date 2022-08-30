@@ -7,8 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
-        <ProjectReference Include="..\..\Models\GestioneSagre.Models.ViewModel\GestioneSagre.Models.ViewModel.csproj" />
+      <ProjectReference Include="..\..\GestioneSagre.Tools\GestioneSagre.Tools.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
 </Project>

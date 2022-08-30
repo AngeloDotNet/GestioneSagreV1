@@ -14,7 +14,7 @@ global using GestioneSagre.Feste.QueryStack;
 global using GestioneSagre.Models.InputModels.Categoria;
 global using GestioneSagre.Models.InputModels.Festa;
 global using GestioneSagre.Models.InputModels.Prodotto;
-global using GestioneSagre.Models.ViewModels;
+global using GestioneSagre.Models.ViewModel;
 global using GestioneSagre.Prodotti.CommandStack;
 global using GestioneSagre.Prodotti.QueryStack;
 global using GestioneSagre.Web.Server.Controllers.Common;
