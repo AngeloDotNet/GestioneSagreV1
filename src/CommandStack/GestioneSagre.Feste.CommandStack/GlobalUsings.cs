@@ -1,7 +1,9 @@
 ﻿global using GestioneSagre.Core.Models.Entities;
-global using GestioneSagre.Core.Models.Enums;
+global using GestioneSagre.Domain.Services.Application;
 global using GestioneSagre.Domain.Services.Infrastructure;
+global using GestioneSagre.Internal.QueryStack;
 global using GestioneSagre.Models.InputModels.Festa;
 global using GestioneSagre.Models.ViewModels;
+global using GestioneSagre.Tools.Enums;
 global using GestioneSagre.ViewExtensions;
 global using Microsoft.Extensions.Logging;

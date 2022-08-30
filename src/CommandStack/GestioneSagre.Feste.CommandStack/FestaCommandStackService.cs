@@ -1,7 +1,4 @@
-﻿using GestioneSagre.Domain.Services.Application;
-using GestioneSagre.Internal.QueryStack;
-
-namespace GestioneSagre.Feste.CommandStack;
+﻿namespace GestioneSagre.Feste.CommandStack;
 
 public class FestaCommandStackService : IFestaCommandStackService
 {
