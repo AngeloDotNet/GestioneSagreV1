@@ -1,4 +1,6 @@
-﻿namespace GestioneSagre.Web.Server.Controllers;
+﻿using GestioneSagre.Models.ViewModel;
+
+namespace GestioneSagre.Web.Server.Controllers;
 
 public class FestaController : BaseController
 {
