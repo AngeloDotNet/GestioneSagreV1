@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\GestioneSagre.Models.InputSender\GestioneSagre.Models.InputSender.csproj" />
         <ProjectReference Include="..\..\GestioneSagre.Models\GestioneSagre.Models.csproj" />
     </ItemGroup>
 
