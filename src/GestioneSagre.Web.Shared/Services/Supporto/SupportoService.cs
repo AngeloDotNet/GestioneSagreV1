@@ -1,5 +1,4 @@
 ﻿using System.Net.Http.Json;
-using GestioneSagre.Web.Shared.Models.InputSender;
 using GestioneSagre.Web.Shared.Services.Configurazione;
 
 namespace GestioneSagre.Web.Shared.Services.Supporto;

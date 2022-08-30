@@ -1,4 +1,4 @@
-namespace GestioneSagre.Core.Models.Enums;
+namespace GestioneSagre.Tools.Enums;
 
 public enum VersioneStato
 {

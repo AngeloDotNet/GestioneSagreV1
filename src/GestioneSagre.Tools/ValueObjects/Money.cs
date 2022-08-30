@@ -1,4 +1,4 @@
-namespace GestioneSagre.Core.Models.ValueObjects;
+namespace GestioneSagre.Tools.ValueObjects;
 
 public record Money
 {

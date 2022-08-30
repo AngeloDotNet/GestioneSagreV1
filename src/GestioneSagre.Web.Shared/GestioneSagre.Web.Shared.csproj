@@ -7,8 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MailKit" Version="3.3.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GestioneSagre.Models.InputSender\GestioneSagre.Models.InputSender.csproj" />
+      <ProjectReference Include="..\GestioneSagre.Tools\GestioneSagre.Tools.csproj" />
     </ItemGroup>
 
     <ItemGroup>

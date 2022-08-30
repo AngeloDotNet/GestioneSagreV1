@@ -1,7 +1,4 @@
-﻿using GestioneSagre.Core.Models.Enums;
-using GestioneSagre.Models.ViewModels;
-
-namespace GestioneSagre.Feste.QueryStack;
+﻿namespace GestioneSagre.Feste.QueryStack;
 
 public interface IFestaQueryStackService
 {

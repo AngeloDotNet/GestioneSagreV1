@@ -12,6 +12,5 @@ public class MailSupportoSenderValidator : AbstractValidator<MailSupportoInputSe
 
         RuleFor(x => x.Messaggio)
             .NotEmpty().WithMessage("Il messaggio è obbligatorio");
-
     }
 }

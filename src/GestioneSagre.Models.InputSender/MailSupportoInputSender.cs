@@ -1,9 +1,15 @@
-﻿namespace GestioneSagre.Models.InputSender;
+﻿using System.ComponentModel.DataAnnotations;
+using MailKit.Security;
+
+namespace GestioneSagre.Models.InputSender;
 
 public partial class MailSupportoInputSender
 {
+    [Required(ErrorMessage = "Il nominativo di contatto è obbligatorio")]
     public string MittenteNominativo { get; set; }
+    [Required(ErrorMessage = "L'email di contatto è obbligatoria")]
     public string MittenteEmail { get; set; }
+    [Required(ErrorMessage = "Il messaggio è obbligatorio")]
     public string Messaggio { get; set; }
     public InputMailOptionSender OptionSender { get; set; }
 }

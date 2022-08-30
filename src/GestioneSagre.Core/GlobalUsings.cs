@@ -1,12 +1,8 @@
-﻿global using System;
-global using System.Collections.Generic;
-global using System.ComponentModel.DataAnnotations;
+﻿global using System.Collections.Generic;
 global using System.Net.Mime;
-global using GestioneSagre.Core.Models.Enums;
-global using GestioneSagre.Core.Models.ValueObjects;
+global using GestioneSagre.Tools.Enums;
+global using GestioneSagre.Tools.ValueObjects;
 global using MailKit.Security;
 global using Microsoft.AspNetCore.Mvc;
-global using Microsoft.Extensions.Configuration;
-global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.OpenApi.Models;
 global using Swashbuckle.AspNetCore.SwaggerGen;

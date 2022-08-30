@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Models\ValueObjects\" />
+      <ProjectReference Include="..\GestioneSagre.Tools\GestioneSagre.Tools.csproj" />
     </ItemGroup>
 
 </Project>
