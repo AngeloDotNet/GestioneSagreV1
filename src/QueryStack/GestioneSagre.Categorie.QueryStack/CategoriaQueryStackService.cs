@@ -1,10 +1,4 @@
-﻿using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Domain.Services.Infrastructure;
-using GestioneSagre.ViewExtensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-
-namespace GestioneSagre.Categorie.QueryStack;
+﻿namespace GestioneSagre.Categorie.QueryStack;
 
 public class CategoriaQueryStackService : ICategoriaQueryStackService
 {
