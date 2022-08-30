@@ -1,12 +1,10 @@
 ﻿GestioneSagre
 |
 ├── editorconfig
-│
 ├── README
-│
 ├── Structure Project
 │
-└── Src (27 di 42 progetti sviluppati)
+└── Src (27 di 43 progetti sviluppati)
     │
     ├── ClientModules (9 progetti)
     │   │
@@ -60,8 +58,9 @@
     │   ├── GestioneSagre.Prodotti.WorkerService (da sviluppare)
     │   └── GestioneSagre.Festa.WorkerService
     │
-    ├── Extra (3 progetti)
+    ├── Extra (4 progetti)
     │   │
+    │   ├── GestioneSagre.Logs (da sviluppare)
     │   ├── GestioneSagre.Localization (da sviluppare)
     │   ├── GestioneSagre.TelegramBot (da sviluppare)
     │   └── GestioneSagre.UnitTest (da sviluppare)
