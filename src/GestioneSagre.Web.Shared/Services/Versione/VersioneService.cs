@@ -1,8 +1,4 @@
-﻿using System.Net.Http.Json;
-using GestioneSagre.Web.Shared.Models.ViewModels;
-using GestioneSagre.Web.Shared.Services.Configurazione;
-
-namespace GestioneSagre.Web.Shared.Services.Versione;
+﻿namespace GestioneSagre.Web.Shared.Services.Versione;
 
 public class VersioneService : IVersioneService
 {
