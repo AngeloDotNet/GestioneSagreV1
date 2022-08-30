@@ -1,12 +1,4 @@
-﻿using GestioneSagre.Core.Models.Entities;
-using GestioneSagre.Core.Models.Enums;
-using GestioneSagre.Domain.Services.Infrastructure;
-using GestioneSagre.Models.ViewModels;
-using GestioneSagre.ViewExtensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-
-namespace GestioneSagre.Feste.QueryStack;
+﻿namespace GestioneSagre.Feste.QueryStack;
 
 public class FestaQueryStackService : IFestaQueryStackService
 {
