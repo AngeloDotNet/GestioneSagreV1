@@ -2,7 +2,7 @@
 global using GestioneSagre.Domain.Services.Application;
 global using GestioneSagre.Domain.Services.Infrastructure;
 global using GestioneSagre.Internal.QueryStack;
-global using GestioneSagre.Models.InputModels.Festa;
+global using GestioneSagre.Models.InputModel.Festa;
 global using GestioneSagre.Models.ViewModel;
 global using GestioneSagre.Tools.Enums;
 global using GestioneSagre.ViewExtensions;
