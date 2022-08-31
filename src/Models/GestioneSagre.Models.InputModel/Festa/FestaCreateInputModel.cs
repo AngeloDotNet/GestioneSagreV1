@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿namespace GestioneSagre.Models.InputModel.Festa;
 
-namespace GestioneSagre.Models.InputModels.Festa;
-
-public class FestaEditInputModel
+public class FestaCreateInputModel
 {
     public int Id { get; set; }
     public string GuidFesta { get; set; }

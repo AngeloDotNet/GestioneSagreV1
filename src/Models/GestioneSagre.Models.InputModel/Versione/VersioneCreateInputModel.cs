@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Models.InputModels.Versione;
+﻿namespace GestioneSagre.Models.InputModel.Versione;
 
 public class VersioneCreateInputModel
 {

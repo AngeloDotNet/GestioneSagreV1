@@ -1,4 +1,6 @@
-﻿namespace GestioneSagre.Versioni.CommandStack;
+﻿using GestioneSagre.Models.InputModel.Versione;
+
+namespace GestioneSagre.Versioni.CommandStack;
 
 public interface IVersioneCommandStackService
 {

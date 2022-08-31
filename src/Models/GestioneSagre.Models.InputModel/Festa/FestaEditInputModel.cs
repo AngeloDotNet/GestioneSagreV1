@@ -1,6 +1,6 @@
-﻿namespace GestioneSagre.Models.InputModels.Festa;
+﻿namespace GestioneSagre.Models.InputModel.Festa;
 
-public class FestaCreateInputModel
+public class FestaEditInputModel
 {
     public int Id { get; set; }
     public string GuidFesta { get; set; }

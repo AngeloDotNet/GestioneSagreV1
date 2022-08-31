@@ -1,6 +1,4 @@
-﻿using GestioneSagre.Models.ViewModel;
-
-namespace GestioneSagre.Web.Server.Controllers;
+﻿namespace GestioneSagre.Web.Server.Controllers;
 
 public class CategoriaController : BaseController
 {

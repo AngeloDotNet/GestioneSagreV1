@@ -1,6 +1,6 @@
-﻿namespace GestioneSagre.Models.InputModels.Prodotto;
+﻿namespace GestioneSagre.Models.InputModel.Prodotto;
 
-public class ProdottoCreateInputModel
+public class ProdottoEditInputModel
 {
     public int Id { get; set; }
     public string GuidFesta { get; set; }

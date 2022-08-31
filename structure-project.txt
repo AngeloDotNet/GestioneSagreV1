@@ -1,84 +1,111 @@
 ﻿GestioneSagre
-|
-├── editorconfig
-├── README
-├── Structure Project
 │
-└── Src (27 di 43 progetti sviluppati)
+•── editorconfig
+│
+•── README
+│
+•── Structure Project
+│
+•── Src (27 di 43 progetti sviluppati)
     │
-    ├── ClientModules (9 progetti)
+    •── ClientModules (9 progetti)
     │   │
-    │   ├── GestioneSagre.Module.App
-    │   ├── GestioneSagre.Module.Init (da sviluppare)
-    │   ├── GestioneSagre.Module.Configuration (da sviluppare)
-    │   ├── GestioneSagre.Module.Users (da sviluppare)
-    │   ├── GestioneSagre.Module.Store (da sviluppare)
-    │   ├── GestioneSagre.Module.Receipt (da sviluppare)
-    │   ├── GestioneSagre.Module.Prints (da sviluppare)
-    │   ├── GestioneSagre.Module.Statistics (da sviluppare)
-    │   └── GestioneSagre.Module.Dashboard (da sviluppare)
-    │
-    ├── CommandStack (4 progetti)
+    │   •── GestioneSagre.Module.App
     │   │
-    │   ├── GestioneSagre.Categorie.CommandStack
-    │   ├── GestioneSagre.Feste.CommandStack
-    │   ├── GestioneSagre.Prodotti.CommandStack
-    │   └── GestioneSagre.Versioni.CommandStack
-    │
-    ├── Extensions (3 progetti)
+    │   •── GestioneSagre.Module.Init (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Extensions
-    │   ├── GestioneSagre.Internal.Extensions
-    │   └── GestioneSagre.ViewExtensions
-    │
-    ├── Models (3 progetti)
+    │   •── GestioneSagre.Module.Configuration (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Models.InputModel (da sviluppare)
-    │   ├── GestioneSagre.Models.InputSender
-    │   └── GestioneSagre.Models.ViewModel
-    │
-    ├── QueryStack (5 progetti)
+    │   •── GestioneSagre.Module.Users (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Categorie.QueryStack
-    │   ├── GestioneSagre.Feste.QueryStack
-    │   ├── GestioneSagre.Internal.QueryStack
-    │   ├── GestioneSagre.Prodotti.QueryStack
-    │   └── GestioneSagre.Versioni.QueryStack
-    │
-    ├── Validators (5 progetti)
+    │   •── GestioneSagre.Module.Store (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Categorie.Validators
-    │   ├── GestioneSagre.Feste.Validators
-    │   ├── GestioneSagre.Internal.Validators
-    │   ├── GestioneSagre.Prodotti.Validators
-    │   └── GestioneSagre.Versioni.Validators
-    │
-    ├── WorkerServices (2 progetti)
+    │   •── GestioneSagre.Module.Receipt (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Prodotti.WorkerService (da sviluppare)
-    │   └── GestioneSagre.Festa.WorkerService
-    │
-    ├── Extra (4 progetti)
+    │   •── GestioneSagre.Module.Prints (da sviluppare)
     │   │
-    │   ├── GestioneSagre.Logs (da sviluppare)
-    │   ├── GestioneSagre.Localization (da sviluppare)
-    │   ├── GestioneSagre.TelegramBot (da sviluppare)
-    │   └── GestioneSagre.UnitTest (da sviluppare)
+    │   •── GestioneSagre.Module.Statistics (da sviluppare)
+    │   │
+    │   •── GestioneSagre.Module.Dashboard (da sviluppare)
     │
-    ├── GestioneSagre.Core
+    •── CommandStack (4 progetti)
+    │   │
+    │   •── GestioneSagre.Categorie.CommandStack
+    │   │
+    │   •── GestioneSagre.Feste.CommandStack
+    │   │
+    │   •── GestioneSagre.Prodotti.CommandStack
+    │   │
+    │   •── GestioneSagre.Versioni.CommandStack
     │
-    ├── GestioneSagre.Domain
+    •── Extensions (3 progetti)
+    │   │
+    │   •── GestioneSagre.Extensions
+    │   │
+    │   •── GestioneSagre.Internal.Extensions
+    │   │
+    │   •── GestioneSagre.ViewExtensions
     │
-    ├── GestioneSagre.Models (progetto soggetto a refactoring)
+    •── Models (3 progetti)
+    │   │
+    │   •── GestioneSagre.Models.InputModel
+    │   │
+    │   •── GestioneSagre.Models.InputSender
+    │   │
+    │   •── GestioneSagre.Models.ViewModel
     │
-    ├── GestioneSagre.Web.Client
+    •── QueryStack (5 progetti)
+    │   │
+    │   •── GestioneSagre.Categorie.QueryStack
+    │   │
+    │   •── GestioneSagre.Feste.QueryStack
+    │   │
+    │   •── GestioneSagre.Internal.QueryStack
+    │   │
+    │   •── GestioneSagre.Prodotti.QueryStack
+    │   │
+    │   •── GestioneSagre.Versioni.QueryStack
     │
-    ├── GestioneSagre.Web.Components
+    •── Validators (5 progetti)
+    │   │
+    │   •── GestioneSagre.Categorie.Validators
+    │   │
+    │   •── GestioneSagre.Feste.Validators
+    │   │
+    │   •── GestioneSagre.Internal.Validators
+    │   │
+    │   •── GestioneSagre.Prodotti.Validators
+    │   │
+    │   •── GestioneSagre.Versioni.Validators
     │
-    ├── GestioneSagre.Web.InternalApi (progetto d'avvio)
+    •── WorkerServices (2 progetti)
+    │   │
+    │   •── GestioneSagre.Prodotti.WorkerService (da sviluppare)
+    │   │
+    │   •── GestioneSagre.Festa.WorkerService
     │
-    ├── GestioneSagre.Web.Server (progetto d'avvio)
+    •── Extra (4 progetti)
+    │   │
+    │   •── GestioneSagre.Logs (da sviluppare)
+    │   │
+    │   •── GestioneSagre.Localization (da sviluppare)
+    │   │
+    │   •── GestioneSagre.TelegramBot (da sviluppare)
+    │   │
+    │   •── GestioneSagre.UnitTest (da sviluppare)
     │
-    ├── GestioneSagre.Security (da sviluppare)
+    •── GestioneSagre.Core
     │
-    └── GestioneSagre.Web.Shared
+    •── GestioneSagre.Domain
+    │
+    •── GestioneSagre.Web.Client
+    │
+    •── GestioneSagre.Web.Components
+    │
+    •── GestioneSagre.Web.InternalApi (progetto d'avvio)
+    │
+    •── GestioneSagre.Web.Server (progetto d'avvio)
+    │
+    •── GestioneSagre.Security (da sviluppare)
+    │
+    •── GestioneSagre.Web.Shared

@@ -7,11 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Models\GestioneSagre.Models.InputSender\GestioneSagre.Models.InputSender.csproj" />
+        <ProjectReference Include="..\..\GestioneSagre.Tools\GestioneSagre.Tools.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@ global using GestioneSagre.Core.Models.Options;
 global using GestioneSagre.Domain.Services.Infrastructure;
 global using GestioneSagre.Internal.Extensions;
 global using GestioneSagre.Internal.QueryStack;
-global using GestioneSagre.Models.InputModels.Versione;
+global using GestioneSagre.Models.InputModel.Versione;
 global using GestioneSagre.Models.InputSender;
 global using GestioneSagre.Models.ViewModel;
 global using GestioneSagre.Versioni.CommandStack;

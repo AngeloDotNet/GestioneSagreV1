@@ -1,2 +1,2 @@
 ﻿global using FluentValidation;
-global using GestioneSagre.Models.InputModels.Festa;
+global using GestioneSagre.Models.InputModel.Festa;

@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Models.InputModels.Festa;
+﻿namespace GestioneSagre.Models.InputModel.Festa;
 
 public class FestaDeleteInputModel
 {

@@ -1,4 +1,4 @@
-﻿namespace GestioneSagre.Models.InputModels.Categoria;
+﻿namespace GestioneSagre.Models.InputModel.Categoria;
 
 public class CategoriaDeleteInputModel
 {
