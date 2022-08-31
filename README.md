@@ -65,4 +65,4 @@ Contributions and/or suggestions are always welcome.
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![Lint Code Base](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/linter.yml/badge.svg)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/linter.yml)
-[![CodeQL](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml/badge.svg)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml)
