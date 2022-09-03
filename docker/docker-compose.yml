@@ -1,0 +1,33 @@
+﻿version: '3.7'
+
+services:
+  gestionesagre:
+    container_name: gs-webapp
+    build:
+      context: .
+      dockerfile: ServerAPI/Dockerfile
+    restart: always
+    volumes:
+      - /docker/gestione-sagre/ServerAPI:/app
+    ports:
+      - 5100:5001
+    networks:
+      - network
+      
+  gestionesagre-internalapi:
+    container_name: gs-internalapi
+    build:
+      context: .
+      dockerfile: InternalAPI/Dockerfile
+    restart: always
+    volumes:
+      - /docker/gestione-sagre/InternalAPI:/app
+    ports:
+      - 5110:5001
+    networks:
+      - network
+
+networks:
+  network:
+    external:
+      name: docker-net
