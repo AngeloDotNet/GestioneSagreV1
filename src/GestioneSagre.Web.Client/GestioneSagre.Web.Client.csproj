@@ -27,4 +27,10 @@
         <BlazorWebAssemblyLazyLoad Include="GestioneSagre.Module.App.dll" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="wwwroot\settings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
