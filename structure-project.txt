@@ -6,7 +6,7 @@
 │
 •── Structure Project
 │
-•── Src (29 di 43 progetti sviluppati)
+•── Src (31 di 45 progetti sviluppati)
     │
     •── ClientModules (9 progetti)
     │   │
@@ -97,6 +97,8 @@
     •── GestioneSagre.Core
     │
     •── GestioneSagre.Domain
+    │
+    •── GestioneSagre.Tools
     │
     •── GestioneSagre.Web.Client
     │
