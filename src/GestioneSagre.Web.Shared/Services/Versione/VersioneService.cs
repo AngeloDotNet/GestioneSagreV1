@@ -5,8 +5,6 @@ public class VersioneService : IVersioneService
     private readonly IConfigurazioneService configurazioneService;
     private HttpClient httpClient;
 
-    private string Versione = "08da4afe-6f26-d449-753a-8e553407828b";
-
     public VersioneViewModel testoVersione { get; set; }
 
     public VersioneService(HttpClient httpClient, IConfigurazioneService configurazioneService)
@@ -17,9 +15,10 @@ public class VersioneService : IVersioneService
 
     public async Task<VersioneViewModel> GetVersione()
     {
-        var pathWebInternalAPI = await configurazioneService.GetPathInternalAPI();
+        var pathWebInternalAPI = await configurazioneService.GetInternalApiFromSettings();
+        var versione = await configurazioneService.GetVersioneFromSettings();
 
-        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"https://{pathWebInternalAPI}/api/Versione/{Versione}");
+        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"https://{pathWebInternalAPI}/api/Versione/{versione}");
 
         return testoVersione;
     }
