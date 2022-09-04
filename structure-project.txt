@@ -102,6 +102,8 @@
     │
     •── GestioneSagre.Web.Components
     │
+    •── GestioneSagre.Web.Configurations
+    │
     •── GestioneSagre.Web.InternalApi (progetto d'avvio)
     │
     •── GestioneSagre.Web.Server (progetto d'avvio)

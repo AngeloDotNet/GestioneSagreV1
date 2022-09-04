@@ -86,6 +86,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Models.ViewMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Models.InputModel", "src\Models\GestioneSagre.Models.InputModel\GestioneSagre.Models.InputModel.csproj", "{5EBB98B6-ED69-45DB-ABF0-E5D6CBCD4450}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestioneSagre.Web.Configurations", "src\GestioneSagre.Web.Configurations\GestioneSagre.Web.Configurations.csproj", "{15F3F62A-2064-4326-9437-D06103FAD413}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -456,6 +458,18 @@ Global
 		{5EBB98B6-ED69-45DB-ABF0-E5D6CBCD4450}.Release|x64.Build.0 = Release|Any CPU
 		{5EBB98B6-ED69-45DB-ABF0-E5D6CBCD4450}.Release|x86.ActiveCfg = Release|Any CPU
 		{5EBB98B6-ED69-45DB-ABF0-E5D6CBCD4450}.Release|x86.Build.0 = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|x64.Build.0 = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Debug|x86.Build.0 = Debug|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|x64.ActiveCfg = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|x64.Build.0 = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|x86.ActiveCfg = Release|Any CPU
+		{15F3F62A-2064-4326-9437-D06103FAD413}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -498,6 +512,7 @@ Global
 		{614242F9-D65F-4646-945F-46983AF4D21A} = {724800C6-344A-4189-B0CF-E20511F0208E}
 		{3E9C1FD1-8229-43CB-ADBB-D256176B059C} = {724800C6-344A-4189-B0CF-E20511F0208E}
 		{5EBB98B6-ED69-45DB-ABF0-E5D6CBCD4450} = {724800C6-344A-4189-B0CF-E20511F0208E}
+		{15F3F62A-2064-4326-9437-D06103FAD413} = {F72F2C37-D91C-4D29-AAA2-9A5708E38448}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78652BA4-601C-4F05-8845-C223CA69835A}
