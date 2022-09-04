@@ -8,11 +8,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Models\GestioneSagre.Models.InputSender\GestioneSagre.Models.InputSender.csproj" />
-      <ProjectReference Include="..\Models\GestioneSagre.Models.ViewModel\GestioneSagre.Models.ViewModel.csproj" />
+        <ProjectReference Include="..\GestioneSagre.Web.Configurations\GestioneSagre.Web.Configurations.csproj" />
+        <ProjectReference Include="..\Models\GestioneSagre.Models.InputSender\GestioneSagre.Models.InputSender.csproj" />
+        <ProjectReference Include="..\Models\GestioneSagre.Models.ViewModel\GestioneSagre.Models.ViewModel.csproj" />
     </ItemGroup>
 
     <ItemGroup>
