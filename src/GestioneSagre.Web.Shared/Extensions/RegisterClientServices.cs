@@ -1,5 +1,4 @@
-﻿using GestioneSagre.Web.Shared.Services.Configurazione;
-using GestioneSagre.Web.Shared.Services.Supporto;
+﻿using GestioneSagre.Web.Shared.Services.Supporto;
 using GestioneSagre.Web.Shared.Services.Versione;
 using Microsoft.Extensions.DependencyInjection;
 
