@@ -13,7 +13,7 @@ public class SupportoService : ISupportoService
 
     public async Task InvioEmailSupportoAsync(MailSupportoInputSender inputModel)
     {
-        var pathWebInternalAPI = await configurazioneService.GetPathInternalAPI();
+        var pathWebInternalAPI = await configurazioneService.GetInternalApiFromSettings();
 
         var response = await httpClient.PostAsJsonAsync($"https://{pathWebInternalAPI}/api/Email/InvioEmailSupporto", inputModel);
 

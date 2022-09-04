@@ -2,6 +2,7 @@
 
 public interface IConfigurazioneService
 {
-    Task<string> GetPathApplicationAPI();
-    Task<string> GetPathInternalAPI();
+    Task<string> GetApplicationApiFromSettings();
+    Task<string> GetInternalApiFromSettings();
+    Task<string> GetVersioneFromSettings();
 }

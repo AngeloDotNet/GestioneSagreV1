@@ -2,17 +2,39 @@
 
 public class ConfigurazioneService : IConfigurazioneService
 {
-    public Task<string> GetPathApplicationAPI()
-    {
-        var pathWeb = "localhost:5001";
+    private ClientSharedOptions[] options;
+    private HttpClient httpClient;
 
-        return Task.FromResult(pathWeb);
+    public ConfigurazioneService(HttpClient httpClient)
+    {
+        this.httpClient = httpClient;
     }
 
-    public Task<string> GetPathInternalAPI()
+    public async Task<ClientSharedOptions[]> ReadOptionsFromJSON()
     {
-        var pathWeb = "localhost:44360";
+        options = await httpClient.GetFromJsonAsync<ClientSharedOptions[]>("settings.json");
 
-        return Task.FromResult(pathWeb);
+        return options;
+    }
+
+    public async Task<string> GetApplicationApiFromSettings()
+    {
+        options = await ReadOptionsFromJSON();
+
+        return options.ElementAt(0).PathPublic;
+    }
+
+    public async Task<string> GetInternalApiFromSettings()
+    {
+        options = await ReadOptionsFromJSON();
+
+        return options.ElementAt(0).PathPrivate;
+    }
+
+    public async Task<string> GetVersioneFromSettings()
+    {
+        options = await ReadOptionsFromJSON();
+
+        return options.ElementAt(0).Versione;
     }
 }
