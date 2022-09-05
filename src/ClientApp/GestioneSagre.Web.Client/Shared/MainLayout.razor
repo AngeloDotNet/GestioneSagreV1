@@ -1,0 +1,68 @@
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="MyCustomTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="1" Color="Color.Primary">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">Gestione Sagre Web</MudText>
+        <MudSpacer />
+        @*<MudIconButton Icon="@Icons.Filled.Login" Color="Color.Inherit" data-bs-toggle="modal" data-bs-target="#modalLogin" />*@
+    </MudAppBar>
+    <MudDrawer @bind-Open="drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <div class="container">
+            <p>&nbsp;</p>
+
+            @Body
+        </div>
+    </MudMainContent>
+</MudLayout>
+
+<!-- Modal -->
+<div class="modal fade" style="margin-top: 50px" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mb-3">
+                    Username
+                </div>
+                <div class="form-group mb-3">
+                    Password
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annulla</button>
+                <button type="button" class="btn btn-outline-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private bool drawerOpen = true;
+
+    private void DrawerToggle()
+    {
+        drawerOpen = !drawerOpen;
+    }
+
+    //https://mudblazor.com/customization/overview#custom-themes
+    MudTheme MyCustomTheme = new()
+        {
+            Palette = new()
+            {
+                //https://mudblazor.com/features/colors#material-colors-list-of-material-colors
+                Primary = Colors.Teal.Darken2
+            }
+        };
+}

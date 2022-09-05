@@ -1,0 +1,14 @@
+﻿@using MudBlazor
+
+<MudAlert Severity="@severity" Dense="@dense">@StringToHtml(@testo)</MudAlert>
+
+@code {
+    [Parameter] public Severity severity { get; set; }
+    [Parameter] public bool dense { get; set; }
+    [Parameter] public string testo { get; set; }
+
+    RenderFragment StringToHtml(string htmlString)
+    {
+        return new RenderFragment(x => x.AddMarkupContent(0, htmlString));
+    }
+}
