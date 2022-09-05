@@ -1,0 +1,20 @@
+﻿@page "/"
+@using GestioneSagre.Models.ViewModel
+@using GestioneSagre.Web.Components
+@using GestioneSagre.Web.Shared.Services.Versione
+@inject IVersioneService versioneService
+
+<CustomBreadCrumb voiceMenu="@MenuBoard" />
+
+<Welcome versione="@TestoVer" />
+
+@code {
+    public string MenuBoard = "Gestione Sagre;Home Page";
+    public string TestoVer = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+            VersioneViewModel testoVersione = await versioneService.GetVersione();
+            TestoVer = testoVersione.TestoVersione.ToString();
+    }
+}
