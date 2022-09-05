@@ -17,12 +17,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\ClientApp\GestioneSagre.Web.Client\GestioneSagre.Web.Client.csproj" />
         <ProjectReference Include="..\CommandStack\GestioneSagre.Categorie.CommandStack\GestioneSagre.Categorie.CommandStack.csproj" />
         <ProjectReference Include="..\CommandStack\GestioneSagre.Versioni.CommandStack\GestioneSagre.Versioni.CommandStack.csproj" />
         <ProjectReference Include="..\Extensions\GestioneSagre.Extensions\GestioneSagre.Extensions.csproj" />
         <ProjectReference Include="..\GestioneSagre.Core\GestioneSagre.Core.csproj" />
         <ProjectReference Include="..\GestioneSagre.Domain\GestioneSagre.Domain.csproj" />
-        <ProjectReference Include="..\GestioneSagre.Web.Client\GestioneSagre.Web.Client.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Categorie.QueryStack\GestioneSagre.Categorie.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Internal.QueryStack\GestioneSagre.Internal.QueryStack.csproj" />
         <ProjectReference Include="..\QueryStack\GestioneSagre.Versioni.QueryStack\GestioneSagre.Versioni.QueryStack.csproj" />
