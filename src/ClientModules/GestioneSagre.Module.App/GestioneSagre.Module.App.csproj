@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\GestioneSagre.Web.Components\GestioneSagre.Web.Components.csproj" />
-    <ProjectReference Include="..\..\GestioneSagre.Web.Shared\GestioneSagre.Web.Shared.csproj" />
+    <ProjectReference Include="..\..\ClientApp\GestioneSagre.Web.Components\GestioneSagre.Web.Components.csproj" />
+    <ProjectReference Include="..\..\ClientApp\GestioneSagre.Web.Shared\GestioneSagre.Web.Shared.csproj" />
   </ItemGroup>
 
 </Project>
