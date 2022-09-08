@@ -1,7 +1,8 @@
 [
     {
-        "pathPublic": "localhost:5001",
+        "PathApplication": "localhost:5001",
         "pathPrivate": "gestionesagre-internalapi.aepserver.it",
+        "pathExternal": "gestionesagre-externalapi.aepserver.it",
         "versione": "08da4afe-6f26-d449-753a-8e553407828b"
     }
 ]
