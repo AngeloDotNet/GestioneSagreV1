@@ -118,7 +118,7 @@
     │
     •── GestioneSagre.Web.Configurations
 	│
-    •── GestioneSagre.Web.ExternalApi (progetto d'avvio) (da sviluppare)
+    •── GestioneSagre.Web.ExternalApi (progetto d'avvio) (da terminare)
     │
     •── GestioneSagre.Web.InternalApi (progetto d'avvio)
     │
