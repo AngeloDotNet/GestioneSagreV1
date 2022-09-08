@@ -11,6 +11,9 @@ services:
       - /docker/gestione-sagre/ServerAPI:/app
     ports:
       - 5100:5001
+    depends_on:
+      - gestionesagre-internalapi
+      - gestionesagre-externalapi
     networks:
       - network
       
@@ -24,6 +27,19 @@ services:
       - /docker/gestione-sagre/InternalAPI:/app
     ports:
       - 5110:5001
+    networks:
+      - network
+      
+  gestionesagre-externalapi:
+    container_name: gs-externalapi
+    build:
+      context: .
+      dockerfile: ExternalAPI/Dockerfile
+    restart: always
+    volumes:
+      - /docker/gestione-sagre/ExternalAPI:/app
+    ports:
+      - 5120:5001
     networks:
       - network
 
