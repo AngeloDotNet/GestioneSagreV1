@@ -17,11 +17,18 @@ public class ConfigurazioneService : IConfigurazioneService
         return options;
     }
 
+    public async Task<string> GetVersioneFromSettings()
+    {
+        options = await ReadOptionsFromJSON();
+
+        return options.ElementAt(0).Versione;
+    }
+
     public async Task<string> GetApplicationApiFromSettings()
     {
         options = await ReadOptionsFromJSON();
 
-        return options.ElementAt(0).PathPublic;
+        return options.ElementAt(0).PathApplication;
     }
 
     public async Task<string> GetInternalApiFromSettings()
@@ -31,10 +38,10 @@ public class ConfigurazioneService : IConfigurazioneService
         return options.ElementAt(0).PathPrivate;
     }
 
-    public async Task<string> GetVersioneFromSettings()
+    public async Task<string> GetExternalApiFromSettings()
     {
         options = await ReadOptionsFromJSON();
 
-        return options.ElementAt(0).Versione;
+        return options.ElementAt(0).PathExternal;
     }
 }
