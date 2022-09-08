@@ -6,7 +6,7 @@
 │
 •── Structure Project
 │
-•── Src (31 di 45 progetti sviluppati)
+•── Src (31 di 52 progetti sviluppati)
     │
     •── ClientModules (9 progetti)
     │   │
@@ -28,7 +28,7 @@
     │   │
     │   •── GestioneSagre.Module.Dashboard (da sviluppare)
     │
-    •── CommandStack (4 progetti)
+    •── CommandStack (6 progetti)
     │   │
     │   •── GestioneSagre.Categorie.CommandStack
     │   │
@@ -37,6 +37,10 @@
     │   •── GestioneSagre.Prodotti.CommandStack
     │   │
     │   •── GestioneSagre.Versioni.CommandStack
+	│   │
+    │   •── GestioneSagre.Prenotazioni.CommandStack
+	│   │
+    │   •── GestioneSagre.Scontrini.CommandStack
     │
     •── Extensions (3 progetti)
     │   │
@@ -54,7 +58,7 @@
     │   │
     │   •── GestioneSagre.Models.ViewModel
     │
-    •── QueryStack (5 progetti)
+    •── QueryStack (7 progetti)
     │   │
     │   •── GestioneSagre.Categorie.QueryStack
     │   │
@@ -65,6 +69,10 @@
     │   •── GestioneSagre.Prodotti.QueryStack
     │   │
     │   •── GestioneSagre.Versioni.QueryStack
+	│   │
+    │   •── GestioneSagre.Prenotazioni.QueryStack
+	│   │
+    │   •── GestioneSagre.Scontrini.QueryStack
     │
     •── Validators (5 progetti)
     │   │
@@ -78,9 +86,13 @@
     │   │
     │   •── GestioneSagre.Versioni.Validators
     │
-    •── WorkerServices (2 progetti)
+    •── WorkerServices (4 progetti)
     │   │
     │   •── GestioneSagre.Prodotti.WorkerService (da sviluppare)
+	│   │
+    │   •── GestioneSagre.Prenotazioni.WorkerService (da sviluppare)
+    │   │
+    │   •── GestioneSagre.Scontrini.WorkerService (da sviluppare)
     │   │
     │   •── GestioneSagre.Festa.WorkerService
     │
@@ -105,6 +117,8 @@
     •── GestioneSagre.Web.Components
     │
     •── GestioneSagre.Web.Configurations
+	│
+    •── GestioneSagre.Web.ExternalApi (progetto d'avvio) (da terminare)
     │
     •── GestioneSagre.Web.InternalApi (progetto d'avvio)
     │

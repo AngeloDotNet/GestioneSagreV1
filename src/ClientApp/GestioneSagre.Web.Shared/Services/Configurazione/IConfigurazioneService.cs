@@ -4,5 +4,6 @@ public interface IConfigurazioneService
 {
     Task<string> GetApplicationApiFromSettings();
     Task<string> GetInternalApiFromSettings();
+    Task<string> GetExternalApiFromSettings();
     Task<string> GetVersioneFromSettings();
 }
