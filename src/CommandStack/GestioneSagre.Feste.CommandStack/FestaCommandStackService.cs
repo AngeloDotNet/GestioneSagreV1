@@ -99,11 +99,35 @@ public class FestaCommandStackService : IFestaCommandStackService
         //await dbContext.SaveChangesAsync();
     }
 
-    public async Task ConclusionFestaAsync(int id)
+    public async Task StatusFestaCreataAsync(int id)
+    {
+        var festa = await dbContext.Feste.FindAsync(id);
+
+        festa.StatusFesta = FestaStato.Creata;
+        await dbContext.SaveChangesAsync();
+    }
+
+    public async Task StatusFestaInCorsoAsync(int id)
+    {
+        var festa = await dbContext.Feste.FindAsync(id);
+
+        festa.StatusFesta = FestaStato.InCorso;
+        await dbContext.SaveChangesAsync();
+    }
+
+    public async Task StatusFestaConclusaAsync(int id)
     {
         var festa = await dbContext.Feste.FindAsync(id);
 
         festa.StatusFesta = FestaStato.Conclusa;
+        await dbContext.SaveChangesAsync();
+    }
+
+    public async Task StatusFestaEliminataAsync(int id)
+    {
+        var festa = await dbContext.Feste.FindAsync(id);
+
+        festa.StatusFesta = FestaStato.Eliminata;
         await dbContext.SaveChangesAsync();
     }
 }
