@@ -30,7 +30,7 @@ public class Startup
             });
         });
 
-        services.AddDbContextPool<GestioneSagreInternalDbContext>(optionBuilder =>
+        services.AddDbContextPool<GestioneSagreExternalDbContext>(optionBuilder =>
         {
             var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
 
