@@ -39,7 +39,7 @@ public class FestaHostedService : IHostedService, IDisposable
                             if (dataOdierna > dataFineFesta)
                             {
                                 // Imposto la stato della festa a CONCLUSA
-                                await festeCommandStackService.ConclusionFestaAsync(item.Id);
+                                await festeCommandStackService.StatusFestaConclusaAsync(item.Id);
                             }
                             else
                             {
