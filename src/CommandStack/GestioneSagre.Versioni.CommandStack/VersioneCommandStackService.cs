@@ -27,7 +27,15 @@ public class VersioneCommandStackService : IVersioneCommandStackService
         return versione.ToVersioneViewModel();
     }
 
-    public async Task DeleteVersioneAsync(VersioneDeleteInputModel inputModel)
+    public async Task AttivaVersioneAsync(VersioneDeleteInputModel inputModel)
+    {
+        var versione = await dbContext.Versioni.FindAsync(inputModel.Id);
+
+        versione.VersioneStato = VersioneStato.Attiva;
+        await dbContext.SaveChangesAsync();
+    }
+
+    public async Task DeprecaVersioneAsync(VersioneDeleteInputModel inputModel)
     {
         var versione = await dbContext.Versioni.FindAsync(inputModel.Id);
 
