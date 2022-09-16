@@ -18,7 +18,7 @@ public class Startup
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
-        services.AddValidationExternalServices(Configuration);
+        //services.AddValidationExternalServices(Configuration);
 
         services.AddCors(options =>
         {
@@ -45,7 +45,7 @@ public class Startup
 
         // Customized services
         services.AddSwaggerExternalServices(Configuration, xmlPath);
-        services.AddRegisterExternalServices(Configuration);
+        //services.AddRegisterExternalServices(Configuration);
 
         // Options
         services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
