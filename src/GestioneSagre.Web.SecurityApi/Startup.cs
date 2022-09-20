@@ -28,6 +28,16 @@ public class Startup
             });
         });
 
+        services.AddDbContextPool<GestioneSagreSecurityDbContext>(optionBuilder =>
+        {
+            var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
+
+            optionBuilder.UseSqlite(connectionString, options =>
+            {
+                options.MigrationsAssembly("GestioneSagre.Web.SecurityApi");
+            });
+        });
+
         var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
