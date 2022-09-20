@@ -126,6 +126,6 @@
     │
     •── GestioneSagre.Web.Server (progetto d'avvio)
     │
-    •── GestioneSagre.Security (da sviluppare)
+    •── GestioneSagre.Web.SecurityApi (progetto d'avvio) (da terminare)
     │
     •── GestioneSagre.Web.Shared
