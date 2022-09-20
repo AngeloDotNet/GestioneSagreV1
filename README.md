@@ -1,5 +1,7 @@
 # GestioneSagre Web
 
+<img src="https://img.shields.io/github/forks/AngeloDotNet/GestioneSagre2?style=for-the-badge"> <img src="https://img.shields.io/github/stars/AngeloDotNet/GestioneSagre2?style=for-the-badge"> <img src="https://img.shields.io/github/issues/AngeloDotNet/GestioneSagre2?style=for-the-badge"> <img src="https://img.shields.io/github/issues-pr/AngeloDotNet/GestioneSagre2?style=for-the-badge"> <img src="https://img.shields.io/github/license/AngeloDotNet/GestioneSagre2?style=for-the-badge">
+
 Free software that allows the web management of festivals and village festivals written in C# and Blazor Wasm
 
 ![image](https://user-images.githubusercontent.com/49655304/181936810-9ef97ec9-9abc-44fe-b700-ec27dddcab4a.png)
@@ -61,9 +63,8 @@ Start the server
 Contributions and/or suggestions are always welcome.
 
 
-## Badges
+## GitHub Workflows
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?style=for-the-badge)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) <br/>
 [![Lint Code Base](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/linter.yml/badge.svg)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/linter.yml)
 [![Build and test](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/build_and_test.yml/badge.svg?branch=master)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/build_and_test.yml)
 [![CodeQL](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/AngeloDotNet/GestioneSagre2/actions/workflows/codeql.yml)
