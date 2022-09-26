@@ -1,5 +1,6 @@
 ﻿global using System.Threading.Tasks;
 global using GestioneSagre.Core.Models.Entities;
+global using GestioneSagre.Mapper;
 global using GestioneSagre.Tools.Enums;
 global using GestioneSagre.Tools.ValueObjects;
 global using ImageMagick;

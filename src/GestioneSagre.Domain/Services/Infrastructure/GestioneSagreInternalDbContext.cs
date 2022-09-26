@@ -15,11 +15,6 @@ public partial class GestioneSagreInternalDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         //Tabella VERSIONE
-        modelBuilder.Entity<VersioneEntity>(entity =>
-        {
-            entity.ToTable("Versione");
-            entity.HasKey(versione => versione.Id);
-            entity.Property(versione => versione.VersioneStato).HasConversion<string>();
-        });
+        modelBuilder.ApplyConfiguration(new VersioneMapper());
     }
 }
