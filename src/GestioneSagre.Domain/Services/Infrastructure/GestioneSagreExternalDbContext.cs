@@ -23,18 +23,9 @@ public partial class GestioneSagreExternalDbContext : DbContext
         modelBuilder.Owned<Money>();
 
         //Tabella PRENOTAZIONE
-        modelBuilder.Entity<PrenotazioneEntity>(entity =>
-        {
-            entity.ToTable("Prenotazione");
-            entity.HasKey(prenotazione => prenotazione.Id);
-            entity.Property(prenotazione => prenotazione.StatoPrenotazione).HasConversion<string>();
-        });
+        modelBuilder.ApplyConfiguration(new PrenotazioneMapper());
 
         //Tabella DETTAGLIO PRENOTAZIONE
-        modelBuilder.Entity<PrenotazioneDettaglioEntity>(entity =>
-        {
-            entity.ToTable("PrenotazioneDettaglio");
-            entity.HasKey(prenotazione => prenotazione.Id);
-        });
+        modelBuilder.ApplyConfiguration(new PrenotazioneDettaglioMapper());
     }
 }
