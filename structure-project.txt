@@ -112,6 +112,8 @@
     │
     •── GestioneSagre.Domain
     │
+    •── GestioneSagre.Mapper (da terminare)
+    │
     •── GestioneSagre.Tools
     │
     •── GestioneSagre.Web.Client
