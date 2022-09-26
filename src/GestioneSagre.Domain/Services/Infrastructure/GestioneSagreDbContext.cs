@@ -26,25 +26,12 @@ public partial class GestioneSagreDbContext : DbContext
         modelBuilder.Owned<Money>();
 
         //Tabella FESTA, INTESTAZIONE ed IMPOSTAZIONI
-        modelBuilder.Entity<FestaEntity>(entity =>
-        {
-            entity.ToTable("Festa");
-            entity.HasKey(festa => festa.Id);
-            entity.Property(festa => festa.StatusFesta).HasConversion<string>();
-        });
+        modelBuilder.ApplyConfiguration(new FestaMapper());
 
         //Tabella CATEGORIE
-        modelBuilder.Entity<CategoriaEntity>(entity =>
-        {
-            entity.ToTable("Categoria");
-            entity.HasKey(categoria => categoria.Id);
-        });
+        modelBuilder.ApplyConfiguration(new CategoriaMapper());
 
         //Tabella PRODOTTO
-        modelBuilder.Entity<ProdottoEntity>(entity =>
-        {
-            entity.ToTable("Prodotto");
-            entity.HasKey(prodotto => prodotto.Id);
-        });
+        modelBuilder.ApplyConfiguration(new ProdottoMapper());
     }
 }
