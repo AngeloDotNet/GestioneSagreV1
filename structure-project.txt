@@ -6,7 +6,7 @@
 │
 •── Structure Project
 │
-•── Src (54 progetti)
+•── Src (55 progetti)
     │
     •── ClientModules (9 progetti)
     │   │
@@ -42,13 +42,15 @@
 	│   │
     │   •── GestioneSagre.Scontrini.CommandStack
     │
-    •── Extensions (4 progetti)
+    •── Extensions (5 progetti)
     │   │
     │   •── GestioneSagre.Extensions
     │   │
     │   •── GestioneSagre.Internal.Extensions
     │   │
     │   •── GestioneSagre.External.Extensions (da sviluppare)
+    │   │
+    │   •── GestioneSagre.Security.Extensions (da sviluppare)
     │   │
     │   •── GestioneSagre.ViewExtensions
     │
